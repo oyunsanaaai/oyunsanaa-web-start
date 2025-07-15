@@ -1,81 +1,99 @@
 <!DOCTYPE html>
 <html lang="mn">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Оюунсанаа – Сэтгэлийн боловсрол</title>
-    <style>
-      body {
-        font-family: "Arial", sans-serif;
-        background: linear-gradient(to bottom, #f5e3e2, #f3d6d4, #c8a398);
-        color: #4a2f2f;
-        padding: 20px;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Оюунсанаа</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffe3ec, #fddde6, #f4c4d7);
+      color: #333;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 160px;
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 16px;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    h2 {
+      color: #9a1c4d;
+      font-size: 24px;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .chat-button {
+      display: inline-block;
+      background-color: #9a1c4d;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 20px;
       }
 
-      h1, h2 {
-        color: #8b3a3a;
-      }
-
-      .logo {
-        width: 150px;
-        height: auto;
-        margin-bottom: 20px;
-      }
-
-      .section {
-        margin-bottom: 30px;
-        background-color: rgba(255, 255, 255, 0.5);
-        padding: 15px;
-        border-radius: 10px;
-      }
-
-      .section h2 {
-        margin-bottom: 10px;
+      p {
+        font-size: 15px;
       }
 
       .chat-button {
-        background-color: #8b3a3a;
-        color: white;
-        padding: 12px 24px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        text-decoration: none;
+        font-size: 14px;
+        padding: 10px 20px;
       }
 
-      .chat-button:hover {
-        background-color: #6c2e2e;
+      .logo {
+        width: 120px;
       }
-    </style>
-  </head>
-
-  <body>
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
     <img src="oyunsanaa-logo.png" alt="Oyunsanaa logo" class="logo" />
 
-    <div class="section">
-      <h2>Оюунсанаа гэж хэн бэ?</h2>
-      <p>Оюунсанаа бол таны сэтгэлийн боловсролын хөтөч юм.</p>
-    </div>
+    <img src="oyunsanaa-pic.jpeg" alt="Oyunsanaa portrait" class="main-image" />
 
-    <div class="section">
-      <h2>Юу хийдэг вэ?</h2>
-      <p>Сэтгэлийн боловсрол олгож, өөрийгөө ойлгоход тусална.</p>
-    </div>
+    <h2>Оюунсанаа гэж хэн бэ?</h2>
+    <p>Оюунсанаа бол таны сэтгэлийн боловсролын хөтөч юм.</p>
 
-    <div class="section">
-      <h2>Хэнд зориулагдсан бэ?</h2>
-      <p>Сэтгэлээ илэрхийлэхэд хэцүү байгаа хүн бүрт зориулав.</p>
-    </div>
+    <h2>Юу хийдэг вэ?</h2>
+    <p>Сэтгэлийн боловсрол олгож, өөрийгөө ойлгоход тусална.</p>
 
-    <div class="section">
-      <h2>Ямар үр дүн өгөх вэ?</h2>
-      <p>Тайвшрал, ойлголт, дотоод амар амгалан.</p>
-    </div>
+    <h2>Хэнд зориулагдсан бэ?</h2>
+    <p>Сэтгэлээ илэрхийлэхэд хэцүү байгаа хүн бүрт зориулав.</p>
 
-    <div class="section">
-      <h2>Ярилцъя 🤍</h2>
-      <a href="https://oyunsanaa-chatbot.vercel.app" class="chat-button">Оюунсанаатай ярилцах</a>
-    </div>
-  </body>
+    <h2>Ямар үр дүн өгөх вэ?</h2>
+    <p>Тайвшрал, ойлголт, дотоод амар амгалан.</p>
+
+    <a href="https://oyunsanaa-chatbot.vercel.app" class="chat-button">Ярилцъя 🤍</a>
+  </div>
+</body>
 </html>
