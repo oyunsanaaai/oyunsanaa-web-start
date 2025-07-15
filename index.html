@@ -2,92 +2,98 @@
 <html lang="mn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Оюунсанаа – Сэтгэлийн боловсрол</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Оюунсанаа</title>
   <style>
     body {
-      font-family: "Arial", sans-serif;
+      font-family: sans-serif;
       background: linear-gradient(to bottom, #fce4ec, #f8bbd0, #d7ccc8);
       margin: 0;
       padding: 0;
-      color: #4e342e;
     }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header img {
+      height: 60px;
+    }
+
     .container {
-      max-width: 720px;
+      max-width: 500px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 10px;
     }
-    .logo {
-      display: block;
-      max-width: 160px;
-      margin: 20px auto;
-    }
-    .section {
-      background-color: rgba(255,255,255,0.7);
+
+    .main-img {
+      width: 100%;
+      height: auto;
       border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 20px;
     }
+
+    .section {
+      background: #fce4ec;
+      border-radius: 16px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+
     h2 {
       color: #880e4f;
-      margin-bottom: 10px;
     }
-    .hero-img {
-      max-width: 100%;
-      border-radius: 12px;
-      display: block;
-      margin: 20px auto;
-    }
-    .cta-section {
-      text-align: center;
-      padding: 30px 10px;
+
+    .chat-section {
+      background: #fce4ec;
+      padding: 24px;
       border-radius: 16px;
-      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
     }
-    .cta-section h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: #880e4f;
-    }
-    .cta-section button {
-      padding: 12px 20px;
-      background-color: #880e4f;
-      color: #fff;
-      font-size: 16px;
+
+    .chat-section button {
+      background-color: #ad1457;
+      color: white;
+      padding: 10px 18px;
       border: none;
       border-radius: 8px;
+      font-size: 16px;
       cursor: pointer;
     }
+
     iframe {
       width: 100%;
-      height: 600px;
+      height: 500px;
       border: none;
-      margin-top: 30px;
+      margin-top: 20px;
       border-radius: 16px;
     }
+
     @media (max-width: 600px) {
       h2 {
-        font-size: 20px;
+        font-size: 18px;
       }
-      .cta-section h2 {
-        font-size: 20px;
-      }
-      .cta-section button {
+
+      .chat-section button {
         font-size: 14px;
-        padding: 10px 16px;
+        padding: 8px 14px;
+      }
+
+      iframe {
+        height: 400px;
       }
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <img src="oyunsanaa-logo.png" alt="Oyunsanaa logo" />
+  </header>
+
   <div class="container">
-    <!-- Лого -->
-    <img src="oyunsanaa-logo.png" alt="Oyunsanaa Logo" class="logo" />
+    <img src="oyunsanaa-pic.jpeg" alt="Oyunsanaa" class="main-img" />
 
-    <!-- Оюунсанаагийн зураг -->
-    <img src="oyunsanaa-pic.jpeg" alt="Oyunsanaa" class="hero-img" />
-
-    <!-- Танилцуулга -->
     <div class="section">
       <h2>Оюунсанаа гэж хэн бэ?</h2>
       <p>Оюунсанаа бол таны сэтгэлийн боловсролын хөтөч юм.</p>
@@ -108,14 +114,17 @@
       <p>Тайвшрал, ойлголт, дотоод амар амгалан.</p>
     </div>
 
-    <!-- Чат товч ба iframe -->
-    <div class="cta-section">
+    <div class="chat-section">
       <h2>Ярилцъя 🤍</h2>
-      <button onclick="window.open('https://oyunsanaa-chatbot.vercel.app','_blank')">Оюунсанаатай ярилцах</button>
-
-      <!-- Чатбот шууд харагдах хувилбар -->
-      <iframe src="https://oyunsanaa-chatbot.vercel.app" allow="microphone;"></iframe>
+      <button onclick="document.getElementById('chatbox').scrollIntoView()">Оюунсанаатай ярилцах</button>
     </div>
+
+    <iframe
+      id="chatbox"
+      src="https://oyunsanaa-chatbot.vercel.app"
+      allow="microphone; clipboard-read; clipboard-write"
+    ></iframe>
   </div>
+
 </body>
 </html>
