@@ -1,130 +1,44 @@
-<!DOCTYPE html>
-<html lang="mn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Оюунсанаа</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: linear-gradient(to bottom, #fce4ec, #f8bbd0, #d7ccc8);
-      margin: 0;
-      padding: 0;
-    }
+<section id="oyunsanaa-intro" style="padding: 60px 20px; text-align: center; background: linear-gradient(to bottom, #f5e7e0, #fbeff0, #ece2d0); font-family: sans-serif;">
+  <h1 style="font-size: 36px; margin-bottom: 10px;">Оюунсанаа</h1>
+  <p style="font-size: 18px; color: #5e4c48;">Сэтгэлийн боловсрол</p>
+</section>
 
-    header {
-      text-align: center;
-      padding: 20px 0;
-    }
+<section id="who-is-oyunsanaa" style="padding: 50px 20px; background-color: #fff8f4;">
+  <h2 style="font-size: 28px;">🧠 Оюунсанаа гэж хэн бэ?</h2>
+  <p style="font-size: 16px; line-height: 1.6; max-width: 700px; margin: 20px auto;">
+    Оюунсанаа бол чиний сэтгэлд зөөлөн дуугаар хүрч, чамайг ойлгож, чамтай хамт сэтгэлээ тайлахад туслах нэгэн. 
+    Тэр бол шүүмжлэхгүй, зөвхөн сонсдог, ойлгодог, зөөлөн чиглүүлдэг дотоод найз.
+  </p>
+</section>
 
-    header img {
-      height: 60px;
-    }
+<section id="what-does-she-do" style="padding: 50px 20px; background-color: #fdf4f0;">
+  <h2 style="font-size: 28px;">💬 Юу хийдэг вэ?</h2>
+  <p style="font-size: 16px; line-height: 1.6; max-width: 700px; margin: 20px auto;">
+    Тэр чамд өөрийгөө ойлгоход тусална.  
+    Чиний мэдрэмж, эргэлзээ, зовлон, баяр бүхнийг шүүмжлэлгүйгээр сонсоно.  
+    Заримдаа чамд дотроос чинь хэлж чадахгүй байсан үгийг зөөлөн сануулж өгнө.
+  </p>
+</section>
 
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 10px;
-    }
+<section id="who-is-it-for" style="padding: 50px 20px; background-color: #fff;">
+  <h2 style="font-size: 28px;">🤝 Хэнд зориулагдсан бэ?</h2>
+  <p style="font-size: 16px; line-height: 1.6; max-width: 700px; margin: 20px auto;">
+    Хэн нэгэнд сэтгэлээ нээж чадахгүй байгаа хүмүүст.  
+    Өөрийгөө буруутгах, хэт их ачаалал авах, ганцаардал, хайр, айдас, тодорхойгүй байдал дунд төөрсөн хүн бүхэнд.
+  </p>
+</section>
 
-    .main-img {
-      width: 100%;
-      height: auto;
-      border-radius: 16px;
-    }
+<section id="results" style="padding: 50px 20px; background-color: #f9f1eb;">
+  <h2 style="font-size: 28px;">🌱 Ямар үр дүн өгөх вэ?</h2>
+  <p style="font-size: 16px; line-height: 1.6; max-width: 700px; margin: 20px auto;">
+    Чи өөрийгөө илүү ойлгож эхэлнэ.  
+    Бусдын оронд өөрийнхөө сэтгэлд анхаарч суралцана.  
+    Аажмаар сэтгэл амар амгалан, сонголтод итгэлтэй болж өөрийгөө хайрлахад ойртно.
+  </p>
+</section>
 
-    .section {
-      background: #fce4ec;
-      border-radius: 16px;
-      padding: 16px;
-      margin: 12px 0;
-    }
-
-    h2 {
-      color: #880e4f;
-    }
-
-    .chat-section {
-      background: #fce4ec;
-      padding: 24px;
-      border-radius: 16px;
-      text-align: center;
-    }
-
-    .chat-section button {
-      background-color: #ad1457;
-      color: white;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-      margin-top: 20px;
-      border-radius: 16px;
-    }
-
-    @media (max-width: 600px) {
-      h2 {
-        font-size: 18px;
-      }
-
-      .chat-section button {
-        font-size: 14px;
-        padding: 8px 14px;
-      }
-
-      iframe {
-        height: 400px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="oyunsanaa-logo.png" alt="Oyunsanaa logo" />
-  </header>
-
-  <div class="container">
-    <img src="oyunsanaa-pic.jpeg" alt="Oyunsanaa" class="main-img" />
-
-    <div class="section">
-      <h2>Оюунсанаа гэж хэн бэ?</h2>
-      <p>Оюунсанаа бол таны сэтгэлийн боловсролын хөтөч юм.</p>
-    </div>
-
-    <div class="section">
-      <h2>Юу хийдэг вэ?</h2>
-      <p>Сэтгэлийн боловсрол олгож, өөрийгөө ойлгоход тусална.</p>
-    </div>
-
-    <div class="section">
-      <h2>Хэнд зориулагдсан бэ?</h2>
-      <p>Сэтгэлээ илэрхийлэхэд хэцүү байгаа хүн бүрт зориулав.</p>
-    </div>
-
-    <div class="section">
-      <h2>Ямар үр дүн өгөх вэ?</h2>
-      <p>Тайвшрал, ойлголт, дотоод амар амгалан.</p>
-    </div>
-
-    <div class="chat-section">
-      <h2>Ярилцъя 🤍</h2>
-      <button onclick="document.getElementById('chatbox').scrollIntoView()">Оюунсанаатай ярилцах</button>
-    </div>
-
-    <iframe
-      id="chatbox"
-      src="https://oyunsanaa-chatbot.vercel.app"
-      allow="microphone; clipboard-read; clipboard-write"
-    ></iframe>
-  </div>
-
-</body>
-</html>
+<section id="cta" style="padding: 60px 20px; background-color: #fceeea; text-align: center;">
+  <h2 style="font-size: 28px;">🕊️ Ярилцъя</h2>
+  <p style="font-size: 16px; margin-bottom: 20px;">Чи яг одоо юу мэдэрч байна вэ?<br>Оюунсанаа чамайг шүүмжлэхгүй, зөвхөн сонсоно.</p>
+  <a href="#chatbot" style="display: inline-block; background-color: #a45a52; color: white; padding: 12px 24px; border-radius: 8px; font-size: 16px; text-decoration: none;">🤍 Ярилцъя</a>
+</section>
