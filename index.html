@@ -1,62 +1,81 @@
 <!DOCTYPE html>
 <html lang="mn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Оюунсанаа</title>
-  <style>
-    body {
-      font-family: "Arial", sans-serif;
-      background: linear-gradient(to bottom, #ffe6eb, #f9d5d9, #f1cfc6);
-      color: #3a1c1c;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оюунсанаа – Сэтгэлийн боловсрол</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(to bottom, #f5e3e2, #f3d6d4, #c8a398);
+        color: #4a2f2f;
+        padding: 20px;
+      }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
+      h1, h2 {
+        color: #8b3a3a;
+      }
 
-    .logo {
-      width: 200px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-    }
+      .logo {
+        width: 150px;
+        height: auto;
+        margin-bottom: 20px;
+      }
 
-    h2 {
-      color: #a7324a;
-      margin-top: 30px;
-    }
+      .section {
+        margin-bottom: 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 15px;
+        border-radius: 10px;
+      }
 
-    p {
-      font-size: 18px;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <img src="oyunsanaa-pic.jpeg" alt="Oyunsanaa logo" class="logo" />
+      .section h2 {
+        margin-bottom: 10px;
+      }
 
-    <h2>Оюунсанаа гэж хэн бэ?</h2>
-    <p>Оюунсанаа бол таны сэтгэлийн боловсролын хөтөч юм.</p>
+      .chat-button {
+        background-color: #8b3a3a;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+      }
 
-    <h2>Юу хийдэг вэ?</h2>
-    <p>Сэтгэлийн боловсрол олгож, өөрийгөө ойлгоход тусална.</p>
+      .chat-button:hover {
+        background-color: #6c2e2e;
+      }
+    </style>
+  </head>
 
-    <h2>Хэнд зориулагдсан бэ?</h2>
-    <p>Сэтгэлээ илэрхийлэхэд хэцүү байгаа хүн бүхэнд зориулав.</p>
+  <body>
+    <img src="oyunsanaa-logo.png" alt="Oyunsanaa logo" class="logo" />
 
-    <h2>Ямар үр дүн өгөх вэ?</h2>
-    <p>Тайвшрал, ойлголт, дотоод амар амгалан.</p>
+    <div class="section">
+      <h2>Оюунсанаа гэж хэн бэ?</h2>
+      <p>Оюунсанаа бол таны сэтгэлийн боловсролын хөтөч юм.</p>
+    </div>
 
-    <h2>Сайн байна уу!</h2>
-    <p>Энэ бол Оюунсанаагийн анхны вэбсайт.</p>
-  </div>
-</body>
+    <div class="section">
+      <h2>Юу хийдэг вэ?</h2>
+      <p>Сэтгэлийн боловсрол олгож, өөрийгөө ойлгоход тусална.</p>
+    </div>
+
+    <div class="section">
+      <h2>Хэнд зориулагдсан бэ?</h2>
+      <p>Сэтгэлээ илэрхийлэхэд хэцүү байгаа хүн бүрт зориулав.</p>
+    </div>
+
+    <div class="section">
+      <h2>Ямар үр дүн өгөх вэ?</h2>
+      <p>Тайвшрал, ойлголт, дотоод амар амгалан.</p>
+    </div>
+
+    <div class="section">
+      <h2>Ярилцъя 🤍</h2>
+      <a href="https://oyunsanaa-chatbot.vercel.app" class="chat-button">Оюунсанаатай ярилцах</a>
+    </div>
+  </body>
 </html>
