@@ -1,58 +1,112 @@
-<!-- Оюунсанаагийн зураг (аль хэдийн орсон гэвэл доорх хэсгээс эхэлнэ) -->
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Оюунсанаа – Сэтгэлийн боловсрол</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background: linear-gradient(to bottom, #fbe8e6, #eec8c3, #d8b4a0);
+      color: #333;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+    }
+    header img {
+      height: 60px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-top: 10px;
+    }
+    section {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .chat-button {
+      background-color: #d58888;
+      border: none;
+      padding: 14px 30px;
+      font-size: 18px;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 20px 0;
+    }
+    .chat-button:hover {
+      background-color: #c06d6d;
+    }
+    iframe {
+      width: 90%;
+      height: 450px;
+      border: none;
+      margin: 30px 0;
+      border-radius: 12px;
+    }
+    footer {
+      background-color: #ffffffcc;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
 
-<!-- Ярилцъя товч -->
-<div style="text-align: center; margin-top: 20px;">
-  <a href="#chat-section" class="chat-button">Ярилцъя 🤍</a>
-</div>
+  <header>
+    <img src="oyunsanaa-logo.png" alt="Oyunsanaa Logo" />
+    <h1>Оюунсанаа – Сэтгэлийн боловсрол</h1>
+  </header>
 
-<!-- Хэзээ ярилцвал тохиромжтой вэ? -->
-<section style="margin: 40px auto; max-width: 700px;">
-  <h2 style="text-align: center;">Хэзээ ярилцвал тохиромжтой вэ?</h2>
-  <ul style="list-style: disc; padding-left: 30px; font-size: 16px; line-height: 1.6;">
-    <li>Ганцаардаж, сэтгэлээ хуваалцах хүн хэрэгтэй үед</li>
-    <li>Буруу сонголт хийчих вий гэж эргэлзэх үед</li>
-    <li>Хайр, харилцаа, гэр бүлтэй холбоотой асуудалтай үед</li>
-    <li>Өөрийгөө ойлгож, амьдралаа эргэн харахыг хүссэн үед</li>
-    <li>Сэтгэл хямарч, зүг чиггүй мэт санагдах үед</li>
-  </ul>
-</section>
+  <section>
+    <h2>Оюунсанаа гэж хэн бэ?</h2>
+    <p>Оюунсанаа бол таны сэтгэлийн боловсролын найдвартай хамтрагч. Тэр таны сэтгэлийг сонсож, ойлгож, эелдэг зөвлөгөө өгдөг сэтгэлзүйн туслагч юм.</p>
+  </section>
 
-<!-- Видео танилцуулга -->
-<section id="video-section" style="background-color: #fef6f8; padding: 40px 20px; text-align: center;">
-  <h2>🎥 Видео танилцуулга</h2>
-  <p style="max-width: 600px; margin: 10px auto 30px;">Оюунсанаагийн танилцуулга видеонуудыг үзэж, түүний аянд нэгдээрэй.</p>
-  <video width="300" controls style="border-radius: 10px;">
-    <source src="videos/oyunsanaa_intro.mp4" type="video/mp4">
-    Таны төхөөрөмж видеог дэмжихгүй байна.
-  </video>
-</section>
+  <section>
+    <h2>Юу хийдэг вэ?</h2>
+    <p>Оюунсанаа танд өөрийгөө ойлгоход тусалж, бусадтай харилцах ур чадварыг хөгжүүлж, сэтгэлзүйн хүндрэлийг даван туулахад дэмжлэг үзүүлдэг.</p>
+  </section>
 
-<!-- Сэтгэлийн тестүүд -->
-<section id="test-section" style="padding: 40px 20px; background-color: #fff7f1; text-align: center;">
-  <h2>🧠 Сэтгэлийн тестүүд</h2>
-  <p style="max-width: 600px; margin: 10px auto;">Өөрийгөө ойлгоход туслах жижиг тестүүдийг бөглөөрэй.</p>
-  <a href="#tests" class="chat-button" style="background-color: #d988bc;">Тест бөглөх</a>
-</section>
+  <section>
+    <h2>Хэнд зориулагдсан бэ?</h2>
+    <p>Өөрийгөө илүү сайн танихыг хүссэн хүн бүхэнд зориулагдсан — өсвөр насны хүүхэд, залуус, эцэг эхчүүд, багш нар гээд хэн бүхэнд.</p>
+  </section>
 
-<!-- Footer -->
-<footer style="background-color: #eee0e0; text-align: center; padding: 20px; font-size: 14px; color: #555; margin-top: 50px;">
-  <p>© 2025 Оюунсанаа – Сэтгэлийн боловсрол</p>
-  <p>Холбоо барих: <a href="mailto:oyunsanaa@gmail.com">oyunsanaa@gmail.com</a></p>
-</footer>
+  <section>
+    <h2>Ямар үр дүн өгөх вэ?</h2>
+    <p>Сэтгэлээ удирдаж сурах, хайрлаж хүндэлж сурах, зөв хариу үйлдэл үзүүлж сурах, өөрийгөө хамгаалж сурах гэх мэт олон эерэг үр дүнг өгнө.</p>
+  </section>
 
-<!-- CSS (дараа style tag дотор нэмж болно) -->
-<style>
-  .chat-button {
-    background-color: #f7b7c5;
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
-    border: none;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  .chat-button:hover {
-    background-color: #e298ab;
-  }
-</style>
+  <section>
+    <h2>Хэзээ ярилцвал тохиромжтой вэ?</h2>
+    <ul style="text-align:left; max-width: 600px; margin: 0 auto;">
+      <li>Хэн нэгэнд сэтгэлээ хэлмээр байгаа ч хэцүү байгаа үед</li>
+      <li>Ганцаардаж, ойлгогдохыг хүсэж байгаа үед</li>
+      <li>Амьдралынхаа зорилгыг эргэн харахыг хүсэх үед</li>
+      <li>Сэтгэлээ удирдаж сурахыг хүсэж байгаа үед</li>
+    </ul>
+  </section>
+
+  <button class="chat-button" onclick="location.href='https://oyunsanaa-chatbot.vercel.app'">Ярилцъя 🤍</button>
+
+  <section>
+    <h2>Видео танилцуулга 🎥</h2>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+  </section>
+
+  <section>
+    <h2>Сэтгэлийн тестүүд 🧠</h2>
+    <p>Та өөрийн сэтгэлзүйн байдал, сэтгэл хөдлөлийн түвшинг сорих сонирхолтой тестүүдийг удахгүй эндээс бөглөх боломжтой.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Оюунсанаа – Сэтгэлийн боловсрол. Бүх эрх хуулиар хамгаалагдсан.
+  </footer>
+
+</body>
+</html>
