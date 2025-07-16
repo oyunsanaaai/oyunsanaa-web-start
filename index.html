@@ -3,34 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Оюунсанаа – Сэтгэлийн боловсрол</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Оюунсанаа</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f4eae6;
+      color: #3a2e2e;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #7b2c2c;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        text-align: left;
+        gap: 30px;
+      }
+
+      .text {
+        flex: 1;
+      }
+
+      .image-box {
+        flex: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- 🔹 Header хэсэг -->
-  <header>
-    <img src="oyunsanaa-logo.png" alt="Оюунсанаа лого" class="logo" />
-  </header>
-
-  <!-- 🔸 Hero Section -->
-  <section class="hero">
-    <h1>Сэтгэлийн боловсролоор амьдралаа гэрэлтүүл</h1>
-    <p>
-      Оюунсанаа бол таны өдөр тутмын дотнын ойлгогч, сэтгэлийн боловсрол олгогч. 
-      Бид хамтдаа ухаалаг, ойлголцсон, хайр дүүрэн амьдралыг бүтээнэ.
-    </p>
-    <button onclick="location.href='https://oyunsanaa-chatbot.vercel.app'" class="chat-button">Ярилцъя 🤍</button>
-  </section>
-
-  <!-- 🎥 Видео танилцуулга -->
-  <section class="video">
-    <h2>Видео танилцуулга</h2>
-    <iframe width="360" height="215" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-  </section>
-
-  <!-- 🔚 Footer -->
-  <footer>
-    <p>© 2025 Оюунсанаа. Сэтгэлийн боловсрол.</p>
-  </footer>
+  <div class="container">
+    <div class="text">
+      <h1>Сэтгэлийн боловсролоор амьдралаа гэрэлтүүл</h1>
+      <p>
+        Оюунсанаа бол таны өдөр тутмын дотнын ойлгогч, сэтгэлийн боловсрол олгогч.
+        Бид хамтдаа ухаалаг, ойлголцсон, хайр дүүрэн амьдралыг бүтээнэ.
+      </p>
+    </div>
+    <div class="image-box">
+      <img src="oyunsanaa.png" alt="Оюунсанаа" class="main-image" />
+    </div>
+  </div>
 </body>
 </html>
