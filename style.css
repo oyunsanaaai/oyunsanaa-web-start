@@ -1,0 +1,58 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic colors and fonts */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #F4EAE6;
+  color: #5E1E1E;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #7B2C2C;
+}
+
+.hero h1 span {
+  display: block;
+  color: #8A2C2C;
+}
+
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.main-image {
+  width: 300px;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #A78C7D;
+}
