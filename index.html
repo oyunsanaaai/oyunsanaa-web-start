@@ -2,147 +2,137 @@
 <html lang="mn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Оюунсанаа – Сэтгэлийн боловсрол</title>
   <style>
     body {
+      font-family: "Helvetica Neue", sans-serif;
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #f9ece8, #fceae0, #f6dfd0);
-      color: #3a2e2e;
+      padding: 0;
+      background: linear-gradient(to bottom, #feecec, #eacfcf, #d1bfb3);
+      color: #5b2f2f;
+    }
+    /* ЛОГО */
+    .logo {
+      width: 160px;
+      margin: 24px auto;
+      display: block;
     }
 
-    header {
-      text-align: center;
-      padding: 30px 20px 10px;
+    /* ЗУРАГ */
+    .oyunsanaa-image-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
     }
-
-    header img {
-      max-width: 180px;
+    .oyunsanaa-image {
+      width: 250px;
+      max-width: 90%;
       height: auto;
+      border-radius: 12px;
     }
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 0;
-    }
-
-    .tagline {
-      font-style: italic;
-      font-size: 20px;
-      margin-bottom: 40px;
-      color: #a76c5e;
-    }
-
+    /* БЛОКУУД */
     .section {
-      max-width: 800px;
-      margin: auto;
-      padding: 40px 20px;
       text-align: center;
+      margin: 20px;
+      padding: 16px;
+      background-color: #ffffffd6;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
     .section h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
+      font-size: 20px;
+      color: #6b4d3b;
+      margin-bottom: 12px;
     }
 
     .section p {
-      font-size: 18px;
-      line-height: 1.7;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
-    .chatbot-section {
-      padding: 60px 20px;
+    /* ВИДЕО */
+    .video-section {
       text-align: center;
-      background-color: #fff3ef;
+      margin: 30px 20px;
     }
 
-    .chatbot-section iframe {
+    .video-section video {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+    }
+
+    /* ЧАТБОТ */
+    .chatbot-section {
+      text-align: center;
+      margin: 40px 20px;
+    }
+
+    .chatbot-section h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .chatbot-iframe {
       width: 100%;
       max-width: 400px;
       height: 500px;
       border: none;
-      border-radius: 10px;
-    }
-
-    .video-section {
-      background-color: #f5e3dc;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .video-section h2 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    .video-section p {
-      font-size: 16px;
-      margin-bottom: 30px;
-    }
-
-    .video-placeholder {
-      background-color: #fff;
       border-radius: 12px;
-      width: 300px;
-      height: 180px;
-      margin: 10px auto;
-      line-height: 180px;
-      color: #999;
-      font-style: italic;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #a97c6a;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 28px;
-      }
-      .section h2 {
-        font-size: 22px;
-      }
-      .video-placeholder {
-        width: 90%;
-        height: 160px;
-      }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- ✅ LOGO + TITLE -->
-  <header>
-    <img src="oyunsanaa-logo.png" alt="Oyunsanaa logo" />
-    <div class="tagline">Сэтгэлийн боловсрол</div>
-  </header>
+  <!-- Лого -->
+  <img src="oyunsanaa-logo.png" alt="Лого" class="logo" />
 
-  <!-- ✅ CHATBOT SECTION -->
-  <div class="chatbot-section">
-    <h2>Оюунсанаатай ярилцъя 🤍</h2>
-    <iframe src="https://oyunsanaa-chatbot.vercel.app" title="Оюунсанаа чатбот"></iframe>
+  <!-- Зураг -->
+  <div class="oyunsanaa-image-container">
+    <img src="oyunsanaa-pic.jpeg" alt="Оюунсанаа" class="oyunsanaa-image" />
   </div>
 
-  <!-- ✅ VIDEO INTRO SECTION -->
+  <!-- Танилцуулга блокууд -->
+  <div class="section">
+    <h2>Оюунсанаа гэж хэн бэ?</h2>
+    <p>Оюунсанаа бол таны сэтгэлийн боловсролын хөтөч юм.</p>
+  </div>
+
+  <div class="section">
+    <h2>Юу хийдэг вэ?</h2>
+    <p>Сэтгэлийн боловсрол олгож, өөрийгөө ойлгоход тусална.</p>
+  </div>
+
+  <div class="section">
+    <h2>Хэнд зориулагдсан бэ?</h2>
+    <p>Сэтгэлээ илэрхийлэхэд хэцүү байгаа хүн бүрт зориулав.</p>
+  </div>
+
+  <div class="section">
+    <h2>Ямар үр дүн өгөх вэ?</h2>
+    <p>Тайвшрал, ойлголт, дотоод амар амгалан.</p>
+  </div>
+
+  <!-- Видео хэсэг -->
   <div class="video-section">
-    <h2>🎥 Видео танилцуулга</h2>
-    <p>Оюунсанаа сэтгэлийн боловсролыг дотно дуу хоолой, бичлэгээр хүргэнэ.</p>
-    
-    <div class="video-placeholder">Видео 1</div>
-    <div class="video-placeholder">Видео 2</div>
-    <div class="video-placeholder">Видео 3</div>
-    
+    <h2>Видео танилцуулга 🎥</h2>
+    <video controls>
+      <source src="oyunsanaa-intro.mp4" type="video/mp4" />
+      Таны хөтөч видео тоглуулахаар тохирохгүй байна.
+    </video>
   </div>
 
-  <!-- ✅ FOOTER -->
-  <footer>
-    © 2025 Оюунсанаа. Бүх эрх хуулиар хамгаалагдсан.
-  </footer>
+  <!-- Чатбот хэсэг -->
+  <div class="chatbot-section">
+    <h2>Ярилцъя 🤍</h2>
+    <iframe
+      class="chatbot-iframe"
+      src="https://oyunsanaa-chatbot.vercel.app"
+    ></iframe>
+  </div>
 
 </body>
 </html>
