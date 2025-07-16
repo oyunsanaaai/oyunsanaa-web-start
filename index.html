@@ -1,138 +1,58 @@
-<!DOCTYPE html>
-<html lang="mn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Оюунсанаа – Сэтгэлийн боловсрол</title>
-  <style>
-    body {
-      font-family: "Helvetica Neue", sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #feecec, #eacfcf, #d1bfb3);
-      color: #5b2f2f;
-    }
-    /* ЛОГО */
-    .logo {
-      width: 160px;
-      margin: 24px auto;
-      display: block;
-    }
+<!-- Оюунсанаагийн зураг (аль хэдийн орсон гэвэл доорх хэсгээс эхэлнэ) -->
 
-    /* ЗУРАГ */
-    .oyunsanaa-image-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-    }
-    .oyunsanaa-image {
-      width: 250px;
-      max-width: 90%;
-      height: auto;
-      border-radius: 12px;
-    }
+<!-- Ярилцъя товч -->
+<div style="text-align: center; margin-top: 20px;">
+  <a href="#chat-section" class="chat-button">Ярилцъя 🤍</a>
+</div>
 
-    /* БЛОКУУД */
-    .section {
-      text-align: center;
-      margin: 20px;
-      padding: 16px;
-      background-color: #ffffffd6;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
+<!-- Хэзээ ярилцвал тохиромжтой вэ? -->
+<section style="margin: 40px auto; max-width: 700px;">
+  <h2 style="text-align: center;">Хэзээ ярилцвал тохиромжтой вэ?</h2>
+  <ul style="list-style: disc; padding-left: 30px; font-size: 16px; line-height: 1.6;">
+    <li>Ганцаардаж, сэтгэлээ хуваалцах хүн хэрэгтэй үед</li>
+    <li>Буруу сонголт хийчих вий гэж эргэлзэх үед</li>
+    <li>Хайр, харилцаа, гэр бүлтэй холбоотой асуудалтай үед</li>
+    <li>Өөрийгөө ойлгож, амьдралаа эргэн харахыг хүссэн үед</li>
+    <li>Сэтгэл хямарч, зүг чиггүй мэт санагдах үед</li>
+  </ul>
+</section>
 
-    .section h2 {
-      font-size: 20px;
-      color: #6b4d3b;
-      margin-bottom: 12px;
-    }
+<!-- Видео танилцуулга -->
+<section id="video-section" style="background-color: #fef6f8; padding: 40px 20px; text-align: center;">
+  <h2>🎥 Видео танилцуулга</h2>
+  <p style="max-width: 600px; margin: 10px auto 30px;">Оюунсанаагийн танилцуулга видеонуудыг үзэж, түүний аянд нэгдээрэй.</p>
+  <video width="300" controls style="border-radius: 10px;">
+    <source src="videos/oyunsanaa_intro.mp4" type="video/mp4">
+    Таны төхөөрөмж видеог дэмжихгүй байна.
+  </video>
+</section>
 
-    .section p {
-      font-size: 16px;
-      line-height: 1.5;
-    }
+<!-- Сэтгэлийн тестүүд -->
+<section id="test-section" style="padding: 40px 20px; background-color: #fff7f1; text-align: center;">
+  <h2>🧠 Сэтгэлийн тестүүд</h2>
+  <p style="max-width: 600px; margin: 10px auto;">Өөрийгөө ойлгоход туслах жижиг тестүүдийг бөглөөрэй.</p>
+  <a href="#tests" class="chat-button" style="background-color: #d988bc;">Тест бөглөх</a>
+</section>
 
-    /* ВИДЕО */
-    .video-section {
-      text-align: center;
-      margin: 30px 20px;
-    }
+<!-- Footer -->
+<footer style="background-color: #eee0e0; text-align: center; padding: 20px; font-size: 14px; color: #555; margin-top: 50px;">
+  <p>© 2025 Оюунсанаа – Сэтгэлийн боловсрол</p>
+  <p>Холбоо барих: <a href="mailto:oyunsanaa@gmail.com">oyunsanaa@gmail.com</a></p>
+</footer>
 
-    .video-section video {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 12px;
-    }
-
-    /* ЧАТБОТ */
-    .chatbot-section {
-      text-align: center;
-      margin: 40px 20px;
-    }
-
-    .chatbot-section h2 {
-      font-size: 20px;
-      margin-bottom: 12px;
-    }
-
-    .chatbot-iframe {
-      width: 100%;
-      max-width: 400px;
-      height: 500px;
-      border: none;
-      border-radius: 12px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Лого -->
-  <img src="oyunsanaa-logo.png" alt="Лого" class="logo" />
-
-  <!-- Зураг -->
-  <div class="oyunsanaa-image-container">
-    <img src="oyunsanaa-pic.jpeg" alt="Оюунсанаа" class="oyunsanaa-image" />
-  </div>
-
-  <!-- Танилцуулга блокууд -->
-  <div class="section">
-    <h2>Оюунсанаа гэж хэн бэ?</h2>
-    <p>Оюунсанаа бол таны сэтгэлийн боловсролын хөтөч юм.</p>
-  </div>
-
-  <div class="section">
-    <h2>Юу хийдэг вэ?</h2>
-    <p>Сэтгэлийн боловсрол олгож, өөрийгөө ойлгоход тусална.</p>
-  </div>
-
-  <div class="section">
-    <h2>Хэнд зориулагдсан бэ?</h2>
-    <p>Сэтгэлээ илэрхийлэхэд хэцүү байгаа хүн бүрт зориулав.</p>
-  </div>
-
-  <div class="section">
-    <h2>Ямар үр дүн өгөх вэ?</h2>
-    <p>Тайвшрал, ойлголт, дотоод амар амгалан.</p>
-  </div>
-
-  <!-- Видео хэсэг -->
-  <div class="video-section">
-    <h2>Видео танилцуулга 🎥</h2>
-    <video controls>
-      <source src="oyunsanaa-intro.mp4" type="video/mp4" />
-      Таны хөтөч видео тоглуулахаар тохирохгүй байна.
-    </video>
-  </div>
-
-  <!-- Чатбот хэсэг -->
-  <div class="chatbot-section">
-    <h2>Ярилцъя 🤍</h2>
-    <iframe
-      class="chatbot-iframe"
-      src="https://oyunsanaa-chatbot.vercel.app"
-    ></iframe>
-  </div>
-
-</body>
-</html>
+<!-- CSS (дараа style tag дотор нэмж болно) -->
+<style>
+  .chat-button {
+    background-color: #f7b7c5;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .chat-button:hover {
+    background-color: #e298ab;
+  }
+</style>
