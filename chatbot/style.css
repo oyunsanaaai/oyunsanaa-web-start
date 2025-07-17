@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.chatbot-container {
+  padding: 40px 20px;
+}
+
+.chatbot-container h2 {
+  color: #781C30;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
