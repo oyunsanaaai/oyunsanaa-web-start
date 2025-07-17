@@ -516,3 +516,30 @@ body {
   left: 0;
   color: var(--primary-color);
 }
+/* ------------------------------
+   Footer
+------------------------------ */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 4rem 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
