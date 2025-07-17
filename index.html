@@ -1,33 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="mn">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Оюунсанаа</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Oyunsanaa</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="logo.png" class="logo" />
+  <header class="header">
+    <div class="logo">Oyunsanaa</div>
+    <nav class="nav">
+      <a href="#">Нүүр</a>
+      <a href="#">Танилцуулга</a>
+      <a href="#">Үйлчилгээ</a>
+      <a href="#">Холбогдох</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Сэтгэлийн боловсролоор<br>амьдралаа гэрэлтүүл</h1>
-      <p>Оюунсанаа бол таны өдөр тутмын дотнын сэтгэл зүйн туслагч.</p>
-      <a href="#chat" class="cta-button">Ярилцъя</a>
-    </div>
+  <main class="main">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл</h1>
+        <p>Оюун санааны тэнцвэр, дотоод амар амгаланг мэдэр.</p>
+        <button class="btn-primary">Ярилцъя</button>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero.jpg" alt="Oyunsanaa" />
+      </div>
+    </section>
+  </main>
 
-    <div class="hero-image">
-      <img src="oyunsanaa.jpg" class="main-image" />
-      <div class="floating-card top-card">Дээхэн талын цонх</div>
-      <div class="floating-card bottom-card">Доорх талын цонх</div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <p>Холбоо барих: oyunsanaa@example.com</p>
-  </footer>
+  <div id="chatbot">🤖</div>
+  <script src="chatbot/chatbot.js"></script>
 </body>
 </html>
