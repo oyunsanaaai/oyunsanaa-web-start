@@ -1,81 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: #f4eae6;
+  font-family: 'Arial', sans-serif;
+  background-color: #F4EAE6;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  background-color: #800020;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  width: 160px;
-  margin: 20px 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main {
+  padding: 2rem;
 }
 
 .hero {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 0 5%;
-  flex-wrap: wrap;
-}
-
-.hero-text {
-  max-width: 50%;
-  min-width: 300px;
+  text-align: center;
 }
 
 .hero-text h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #3b2f2f;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #800020;
 }
 
 .hero-text p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  color: #5a4a4a;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 
-.cta-button {
-  background-color: #8c3a3a;
+.btn-primary {
+  background-color: #A78C7D;
   color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.hero-image {
-  position: relative;
-  width: 45%;
-  min-width: 300px;
-}
-
-.main-image {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.floating-card {
-  position: absolute;
-  background-color: white;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  padding: 16px;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   border-radius: 8px;
-  width: 70%;
+  cursor: pointer;
 }
 
-.top-card {
-  top: -30px;
-  right: -20px;
+.hero-image img {
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
-.bottom-card {
-  bottom: -30px;
-  left: -20px;
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #800020;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-.footer {
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  color: #555;
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  .hero-text {
+    max-width: 50%;
+  }
+
+  .hero-image {
+    max-width: 45%;
+  }
 }
