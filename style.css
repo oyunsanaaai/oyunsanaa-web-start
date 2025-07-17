@@ -1,7 +1,8 @@
 body {
-  margin: 0;
   font-family: sans-serif;
-  background: #F4EAE6;
+  margin: 0;
+  padding: 0;
+  background-color: #F4EAE6;
   color: #333;
 }
 
@@ -9,8 +10,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: white;
+  padding: 20px;
+  background-color: #fff;
 }
 
 .logo {
@@ -20,56 +21,46 @@ body {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 nav a {
   text-decoration: none;
-  color: #6D2932;
+  color: #A78C7D;
   font-weight: bold;
 }
 
 .hero {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  padding: 2rem;
-  gap: 2rem;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.hero-text {
-  flex: 1 1 300px;
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 12px;
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #781C30;
 }
 
 .btn-primary {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  background-color: #6D2932;
-  color: white;
-  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: #A78C7D;
+  color: #fff;
   text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-image img {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 20px;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 30px;
   background-color: #fff;
-  font-size: 0.9rem;
-}
-#chatbot {
-  padding: 2rem;
-  background-color: #fff;
-  text-align: center;
-}
-
-#chatbot h2 {
-  margin-bottom: 1rem;
-  color: #6D2932;
+  margin-top: 40px;
 }
