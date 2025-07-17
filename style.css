@@ -437,3 +437,82 @@ body {
     font-size: 2rem;
   }
 }
+/* ------------------------------
+   Audience Section
+------------------------------ */
+.audience {
+  background-color: var(--background-color);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.audience h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.audience-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.audience-item {
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 300px;
+  flex: 1 1 250px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.audience-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.audience-item p {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+/* ------------------------------
+   Results Section
+------------------------------ */
+.results {
+  background-color: var(--white);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.results h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.result-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.result-list li {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.result-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
