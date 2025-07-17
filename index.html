@@ -1,51 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="mn">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Оюунсанаа</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #F4EAE6;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="text-[#511F26] font-sans">
-
-  <!-- Header -->
-  <header class="flex justify-between items-center px-6 md:px-16 py-6">
-    <div class="w-40">
-      <img src="./logo.png" alt="Oyunsanaa logo" class="h-auto" />
-    </div>
-    <nav class="space-x-6 text-md hidden md:flex">
-      <a href="#lessons" class="hover:underline">Онлайн хичээл</a>
-      <a href="#tests" class="hover:underline">Сэтгэлзүйн тест</a>
-      <a href="#videos" class="hover:underline">Видео</a>
-      <a href="#chat" class="hover:underline font-semibold">Ярилцъя</a>
-    </nav>
+<body>
+  <header>
+    <img src="logo.png" class="logo" />
   </header>
 
-  <!-- Hero Section -->
-  <section class="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12">
-    <!-- Left Text -->
-    <div class="md:w-1/2 text-center md:text-left">
-      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
-        Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл
-      </h1>
-      <p class="text-lg mb-6">
-        Оюунсанаа бол таны өдөр тутмын дотнын сэтгэл зүйн туслагч.
-      </p>
-      <a href="#chat" class="inline-block bg-[#A78C7D] hover:bg-[#8a6c5c] text-white py-3 px-6 rounded-md text-lg transition">
-        Ярилцъя
-      </a>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Сэтгэлийн боловсролоор<br>амьдралаа гэрэлтүүл</h1>
+      <p>Оюунсанаа бол таны өдөр тутмын дотнын сэтгэл зүйн туслагч.</p>
+      <a href="#chat" class="cta-button">Ярилцъя</a>
     </div>
 
-    <!-- Right Image -->
-    <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-      <img src="./oyunsanaa-main.jpg" alt="Oyuunsanaa" class="rounded-3xl w-[300px] shadow-lg" />
+    <div class="hero-image">
+      <img src="oyunsanaa.jpg" class="main-image" />
+      <div class="floating-card top-card">Дээхэн талын цонх</div>
+      <div class="floating-card bottom-card">Доорх талын цонх</div>
     </div>
   </section>
 
+  <footer class="footer">
+    <p>Холбоо барих: oyunsanaa@example.com</p>
+  </footer>
 </body>
 </html>
