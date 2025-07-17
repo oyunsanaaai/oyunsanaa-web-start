@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Оюунсанаа — Сэтгэлийн боловсрол</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Оюунсанаа</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #F4EAE6;
+    }
+  </style>
 </head>
-<body>
-  <header class="hero">
-    <div class="container">
-      <h1>Сэтгэлийн боловсролоор<br><span>амьдралаа гэрэлтүүл</span></h1>
-      <p class="intro">
-        Оюунсанаа бол таны өдөр тутмын дотнын сэтгэл зүйн туслагч.<br>
-        Бид хамтдаа ухаалаг, ойлголцсон, хайр дүүрэн амьдрал руу алхана.
-      </p>
-      <img src="oyunsanaa.png" alt="Оюунсанаа" class="main-image">
-    </div>
+<body class="text-[#511F26] font-sans">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center px-10 py-6 bg-transparent">
+    <div class="text-3xl font-bold tracking-wide">Oyunsanaa</div>
+    <nav class="space-x-6 hidden md:block">
+      <a href="#lessons" class="hover:underline">Онлайн хичээл</a>
+      <a href="#tests" class="hover:underline">Сэтгэлзүйн тест</a>
+      <a href="#videos" class="hover:underline">Видео</a>
+      <a href="#chat" class="hover:underline font-semibold">Ярилцъя</a>
+    </nav>
   </header>
-  <footer>
-    <p>© 2025 Оюунсанаа</p>
-  </footer>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row items-center justify-between px-10 md:px-20 py-16">
+    <!-- Left Text -->
+    <div class="md:w-1/2 mb-10 md:mb-0">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+        Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл
+      </h1>
+      <p class="text-lg mb-6">
+        Оюунсанаа бол таны өдөр тутмын дотнын сэтгэл зүйн туслагч.
+      </p>
+      <a href="#chat" class="inline-block bg-[#A78C7D] hover:bg-[#8a6c5c] text-white py-3 px-6 rounded-md text-lg transition">
+        Ярилцъя
+      </a>
+    </div>
+
+    <!-- Right Image -->
+    <div class="md:w-1/2">
+      <img src="https://raw.githubusercontent.com/Oyunsanaa7/oyunsanaa-assets/main/oyunsanaa-main.png" alt="Oyuunsanaa" class="rounded-3xl w-full max-w-sm mx-auto shadow-lg" />
+    </div>
+  </section>
+
 </body>
 </html>
