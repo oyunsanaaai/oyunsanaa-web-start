@@ -57,6 +57,18 @@ nav a {
   max-width: 100%;
   border-radius: 20px;
 }
+.chatbot-section {
+  padding: 40px 20px;
+  background-color: #fff;
+  border-top: 2px solid #F4EAE6;
+  text-align: center;
+}
+
+.chatbot-section h2 {
+  font-size: 1.8rem;
+  color: #781C30;
+  margin-bottom: 20px;
+}
 
 footer {
   text-align: center;
