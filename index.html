@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
-      <img src="assets/logo.png" alt="Oyunsanaa Logo" class="logo" />
+      <img src="assets/logo.png" alt="Oyunsanaa logo" class="logo" />
       <nav class="nav-menu">
         <ul>
           <li><a href="#about">Төслийн танилцуулга</a></li>
           <li><a href="#tests">Сэтгэлзүйн тестүүд</a></li>
-          <li><a href="#courses">Онлайн хичээлүүд</a></li>
+          <li><a href="#lessons">Онлайн хичээлүүд</a></li>
           <li><a href="#videos">Видео контентүүд</a></li>
         </ul>
       </nav>
@@ -25,87 +26,44 @@
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text">
       <h1>Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл</h1>
-      <p class="subtitle">Өөрийгөө ойлгож, бусдыг хайрлаж…</p>
-      <a href="#chatbot" class="btn-primary">Ярилцъя</a>
+      <p class="subtitle">Өөрийгөө ойлгож, бусдыг хайрлаж, амьдралаа гэрэлтүүлэх суурь нь энд оршино.</p>
+      <a href="#chat" class="btn-primary">Ярилцъя</a>
     </div>
+
     <div class="hero-image">
       <img src="assets/hero.jpg" alt="Оюунсанаа" />
+
+      <!-- Floating Card -->
+      <div class="floating-card">
+        <h3>Оюунсанаа гэж хэн бэ?</h3>
+        <p>Тэр таны дотор байгаа зөөлөн, ухаалаг дуу хоолой.</p>
+        <a href="#chat" class="btn-outline">Дэлгэрэнгүй</a>
+      </div>
     </div>
   </section>
-<section class="about" id="about">
-  <h2>Бидний тухай</h2>
-  <p>
-    Оюунсанаа бол сэтгэлийн боловсролыг түгээх зорилготой, олон нийтэд нээлттэй танин мэдэхүйн платформ юм.
-    Бид сэтгэлзүйн хөгжлийг дэмжих тестүүд, хичээлүүд, видеонууд болон чатбот туслалцаагаар дамжуулан 
-    хувь хүний өөрийгөө ойлгох чадварыг нэмэгдүүлэхэд чиглэдэг.
-  </p>
-</section>
-  <section id="chat" class="chat">
-  <h2>Сэтгэлээ хуваалцах цонх</h2>
-  
-  <!-- Видео хэсэг -->
-  <iframe 
-    src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-    title="Oyunsanaa видео танилцуулга" 
-    allowfullscreen>
-  </iframe>
 
-  <br><br>
-
-  <!-- Чатбот хэсэг -->
-  <iframe 
-    src="https://oyunsanaa-chatbot.vercel.app" 
-    title="Oyunsanaa Chatbot">
-  </iframe>
-</section>
-<footer class="footer">
-  <div class="footer-content">
-    <h2>Холбоо барих</h2>
-    <p>Бид танд туслахад үргэлж бэлэн байна.</p>
-    <a href="mailto:oyunsanaa.help@gmail.com" class="btn-outline">Имэйл илгээх</a>
-  </div>
-</footer>
-
-<section class="audience" id="audience">
-  <h2>Хэнд зориулагдсан бэ?</h2>
-  <div class="audience-grid">
-    <div class="audience-item">
-      <h3>Оюутан</h3>
-      <p>Сэтгэлийн тэнцвэрээ олж, зорилгоо тодорхойлохыг хүсэгч.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>Цаг авах эсвэл зөвлөгөө авах уу?</h2>
+      <p>Бид танд туслахад үргэлж бэлэн байна.</p>
+      <a href="mailto:oyunsanaa.help@gmail.com" class="btn-outline">Холбогдох</a>
     </div>
-    <div class="audience-item">
-      <h3>Ажил эрхлэгч</h3>
-      <p>Ажлын стрессээ зохицуулж, амьдралын эрч хүчээ нэмэхийг хүсэгч.</p>
-    </div>
-    <div class="audience-item">
-      <h3>Эцэг эх</h3>
-      <p>Хүүхдийнхээ сэтгэлзүйг ойлгож, зөв дэмжихийг эрмэлзэгч.</p>
-    </div>
-  </div>
-</section>
+  </footer>
 
-<section class="results" id="results">
-  <h2>Ямар үр дүн өгөх вэ?</h2>
-  <ul class="result-list">
-    <li>Өөрийгөө ойлгох чадвар дээшилнэ</li>
-    <li>Сэтгэлзүйн тэнцвэрт амьдралд ойртоно</li>
-    <li>Өөртөө итгэх итгэл нэмэгдэнэ</li>
-    <li>Сэтгэл хөдлөлөө зөв зохицуулж сурна</li>
-  </ul>
-</section>
-
-  <!-- Цаашдын хэсгүүд дараах байдлаар үргэлжилнэ -->
-  <!-- About, Cards, Video, Chatbot, Footer гэх мэт -->
-<footer class="footer">
-  <div class="footer-content">
-    <h2>Холбоо барих</h2>
-    <p>Бид танд туслахад үргэлж бэлэн байна.</p>
-    <a href="mailto:oyunsanaa.help@gmail.com" class="btn-outline">Имэйл илгээх</a>
-  </div>
-</footer>
-
+  <script>
+    window.addEventListener("scroll", () => {
+      const footer = document.querySelector(".footer");
+      const footerTop = footer.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (footerTop < windowHeight) {
+        footer.classList.add("visible");
+      }
+    });
+  </script>
 </body>
 </html>
