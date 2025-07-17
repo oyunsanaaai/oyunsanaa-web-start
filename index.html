@@ -2,35 +2,32 @@
 <html lang="mn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oyunsanaa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oyunsanaa - Сэтгэлийн боловсрол</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="logo">Oyunsanaa</div>
-    <nav class="nav">
-      <a href="#">Нүүр</a>
-      <a href="#">Танилцуулга</a>
-      <a href="#">Үйлчилгээ</a>
-      <a href="#">Холбогдох</a>
+
+  <header class="site-header">
+    <img src="assets/logo.png" alt="Oyunsanaa logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#about">Бидний тухай</a></li>
+        <li><a href="#chatbot">Чатбот</a></li>
+        <li><a href="#contact">Холбоо барих</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="main">
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл</h1>
-        <p>Оюун санааны тэнцвэр, дотоод амар амгаланг мэдэр.</p>
-        <button class="btn-primary">Ярилцъя</button>
-      </div>
-      <div class="hero-image">
-        <img src="assets/hero.jpg" alt="Oyunsanaa" />
-      </div>
-    </section>
-  </main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Сэтгэлийн боловсролоор<br>амьдралаа гэрэлтүүл</h1>
+      <a href="#chatbot" class="btn-primary">Ярилцъя</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/hero.jpg" alt="Оюунсанаа" />
+    </div>
+  </section>
 
-  <div id="chatbot">🤖</div>
-  <script src="chatbot/chatbot.js"></script>
 </body>
 </html>
