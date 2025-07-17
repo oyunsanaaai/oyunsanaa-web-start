@@ -63,3 +63,13 @@ footer {
   background-color: #fff;
   font-size: 0.9rem;
 }
+#chatbot {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+#chatbot h2 {
+  margin-bottom: 1rem;
+  color: #6D2932;
+}
