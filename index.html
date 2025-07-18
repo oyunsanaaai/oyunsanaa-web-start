@@ -7,56 +7,68 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <img src="assets/logo.png" alt="Oyunsanaa logo" class="logo" />
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#about">Төслийн танилцуулга</a></li>
-          <li><a href="#tests">Сэтгэлзүйн тестүүд</a></li>
-          <li><a href="#lessons">Онлайн хичээлүүд</a></li>
-          <li><a href="#videos">Видео контентүүд</a></li>
-        </ul>
-      </nav>
-      <div class="header-buttons">
-        <a href="#login" class="btn-outline">Нэвтрэх</a>
-        <a href="#signup" class="btn-filled">Бүртгүүлэх</a>
-      </div>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл</h1>
-      <p class="subtitle">Өөрийгөө ойлгож, бусдыг хайрлаж, амьдралаа гэрэлтүүлэх суурь нь энд оршино.</p>
-      <a href="#chat" class="btn-primary">Ярилцъя</a>
-    </div>
-
-    <div class="hero-image">
-      <img src="assets/hero.jpg" alt="Оюунсанаа" />
-      <div class="floating-card">
-        <h3>Оюунсанаа гэж хэн бэ?</h3>
-        <p>Тэр таны дотор байгаа зөөлөн, ухаалаг дуу хоолой.</p>
-        <a href="#chat" class="btn-outline">Дэлгэрэнгүй</a>
+  <!-- Fixed Hero Container -->
+  <div class="fixed-hero">
+    <header class="site-header">
+      <div class="container">
+        <img src="assets/logo.png" alt="Oyunsanaa logo" class="logo" />
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#about">Төслийн танилцуулга</a></li>
+            <li><a href="#tests">Сэтгэлзүйн тестүүд</a></li>
+            <li><a href="#lessons">Онлайн хичээлүүд</a></li>
+            <li><a href="#videos">Видео контентүүд</a></li>
+          </ul>
+        </nav>
+        <div class="header-buttons">
+          <a href="#login" class="btn-outline">Нэвтрэх</a>
+          <a href="#signup" class="btn-filled">Бүртгүүлэх</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <h2>Цаг авах эсвэл зөвлөгөө авах уу?</h2>
-      <p>Бид танд туслахад үргэлж бэлэн байна.</p>
-      <a href="mailto:oyunsanaa.help@gmail.com" class="btn-outline">Холбогдох</a>
-      <div style="margin-top: 2rem;">
-        <a href="https://facebook.com" class="social">🌐</a>
-        <a href="https://instagram.com" class="social">📷</a>
-        <a href="https://youtube.com" class="social">▶️</a>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл</h1>
+        <p class="subtitle">Өөрийгөө ойлгож, бусдыг хайрлаж, амьдралаа гэрэлтүүлэх суурь нь энд оршино.</p>
+        <a href="#chat" class="btn-primary">Ярилцъя</a>
       </div>
-    </div>
-  </footer>
+      <div class="hero-image">
+        <img src="assets/hero.jpg" alt="Оюунсанаа" />
+        <div class="floating-card">
+          <h3>Оюунсанаа гэж хэн бэ?</h3>
+          <p>Тэр таны дотор байгаа зөөлөн, ухаалаг дуу хоолой.</p>
+          <a href="#chat" class="btn-outline">Дэлгэрэнгүй</a>
+          <a href="#more" class="btn-outline">Үр дүн</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Гүйдэг хэсэг -->
+  <main class="scroll-section">
+    <section id="about">
+      <div class="container">
+        <h2>Бидний тухай</h2>
+        <p>Энд Оюунсанаа төслийн дэлгэрэнгүй танилцуулга, зорилго, үнэ цэнэ зэргийг оруулна.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <h2>Цаг авах эсвэл зөвлөгөө авах уу?</h2>
+        <p>Бид танд туслахад үргэлж бэлэн байна.</p>
+        <a href="mailto:oyunsanaa.help@gmail.com" class="btn-outline">Холбогдох</a>
+        <div class="social-links">
+          <a href="#" class="social">🌐</a>
+          <a href="#" class="social">📘</a>
+          <a href="#" class="social">📸</a>
+        </div>
+      </div>
+    </footer>
+  </main>
 
   <script>
     window.addEventListener("scroll", () => {
@@ -68,5 +80,6 @@
       }
     });
   </script>
+
 </body>
 </html>
