@@ -1,292 +1,67 @@
-/* ------------------------------
-   Oyunsanaa Style - Based on Jot Design
------------------------------- */
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oyunsanaa - Сэтгэлийн боловсрол</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <img src="assets/logo.png" alt="Oyunsanaa logo" class="logo" />
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#about">Төслийн танилцуулга</a></li>
+          <li><a href="#tests">Сэтгэлзүйн тестүүд</a></li>
+          <li><a href="#lessons">Онлайн хичээлүүд</a></li>
+          <li><a href="#videos">Видео контентүүд</a></li>
+        </ul>
+      </nav>
+      <div class="header-buttons">
+        <a href="#login" class="btn-outline">Нэвтрэх</a>
+        <a href="#signup" class="btn-filled">Бүртгүүлэх</a>
+      </div>
+    </div>
+  </header>
 
-:root {
-  --primary-color: #781C30;
-  --background-color: #F4EAE6;
-  --accent-color: #A78C7D;
-  --text-color: #333333;
-  --white: #ffffff;
-}
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл</h1>
+      <p class="subtitle">Өөрийгөө ойлгож, бусдыг хайрлаж, амьдралаа гэрэлтүүлэх суурь нь энд оршино.</p>
+      <a href="#chat" class="btn-primary">Ярилцъя</a>
+    </div>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    <div class="hero-image">
+      <img src="assets/hero.jpg" alt="Оюунсанаа" />
+      <div class="floating-card">
+        <h3>Оюунсанаа гэж хэн бэ?</h3>
+        <p>Тэр таны дотор байгаа зөөлөн, ухаалаг дуу хоолой.</p>
+        <a href="#chat" class="btn-outline">Дэлгэрэнгүй</a>
+      </div>
+    </div>
+  </section>
 
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.6;
-}
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>Цаг авах эсвэл зөвлөгөө авах уу?</h2>
+      <p>Бид танд туслахад үргэлж бэлэн байна.</p>
+      <a href="mailto:oyunsanaa.help@gmail.com" class="btn-outline">Холбогдох</a>
+    </div>
+  </footer>
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* ------------------------------
-   Header
------------------------------- */
-.site-header {
-  background-color: var(--white);
-  border-bottom: 1px solid #e5e5e5;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding: 1rem 0;
-}
-
-.logo {
-  height: 120px;
-  object-fit: contain;
-}
-
-.nav-menu ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: var(--accent-color);
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-  color: var(--primary-color);
-}
-
-.header-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.btn-outline,
-.btn-filled,
-.btn-primary {
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-outline {
-  border: 2px solid var(--accent-color);
-  background-color: transparent;
-  color: var(--accent-color);
-}
-
-.btn-outline:hover {
-  background-color: var(--accent-color);
-  color: var(--white);
-}
-
-.btn-filled {
-  background-color: var(--accent-color);
-  color: var(--white);
-  border: none;
-}
-
-.btn-filled:hover {
-  background-color: #8a6d5a;
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--white);
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #5e1423;
-}
-
-/* ------------------------------
-   Hero Section
------------------------------- */
-.fixed-hero {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: var(--white);
-}
-
-.scroll-section {
-  margin-top: -100px;
-  padding-top: 100px;
-  position: relative;
-  z-index: 1;
-}
-
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4rem 2rem;
-  background-color: var(--white);
-  position: relative;
-}
-
-.hero-text {
-  flex: 1 1 400px;
-  max-width: 600px;
-  margin-bottom: 2rem;
-}
-
-.hero-text h1 {
-  font-size: 2.8rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: var(--accent-color);
-}
-
-.hero-image {
-  flex: 1 1 300px;
-  text-align: center;
-  position: relative;
-}
-
-.hero-image img {
-  width: 75%;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.floating-card {
-  position: absolute;
-  bottom: 2rem;
-  left: -4rem;
-  background-color: var(--background-color);
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 280px;
-  text-align: left;
-  animation: floatIn 1s ease forwards;
-}
-
-.floating-card h3 {
-  font-size: 1.2rem;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.floating-card p {
-  font-size: 1rem;
-  color: var(--text-color);
-  margin-bottom: 1rem;
-}
-
-.floating-card .btn-outline {
-  font-size: 0.9rem;
-  padding: 0.4rem 1rem;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.floating-card .btn-outline:last-child {
-  margin-bottom: 0;
-}
-
-@keyframes floatIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ------------------------------
-   Footer
------------------------------- */
-.footer {
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 4rem 2rem;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.footer.visible {
-  opacity: 1;
-}
-
-.footer h2 {
-  font-size: 2.4rem;
-  font-family: 'Georgia', serif;
-  margin-bottom: 1rem;
-}
-
-.footer p {
-  font-size: 1.4rem;
-  font-family: 'Georgia', serif;
-  margin-bottom: 2rem;
-}
-
-.footer a.social {
-  display: inline-block;
-  margin: 0 0.5rem;
-  font-size: 1.5rem;
-  color: var(--white);
-  transition: color 0.3s ease;
-}
-
-.footer a.social:hover {
-  color: var(--accent-color);
-}
-
-/* ------------------------------
-   Responsive
------------------------------- */
-@media (max-width: 768px) {
-  .container,
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .header-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .floating-card {
-    position: static;
-    margin-top: 2rem;
-  }
-
-  .logo {
-    height: 80px;
-  }
-}
+  <script>
+    window.addEventListener("scroll", () => {
+      const footer = document.querySelector(".footer");
+      const footerTop = footer.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (footerTop < windowHeight) {
+        footer.classList.add("visible");
+      }
+    });
+  </script>
+</body>
+</html>
