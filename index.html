@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="mn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oyunsanaa - Сэтгэлийн боловсрол</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <img src="assets/logo.png" alt="Oyunsanaa logo" class="logo" />
       <nav class="nav-menu">
         <ul>
-          <li><a href="#about">Төслийн танилцуулга</a></li>
-          <li><a href="#test">Сэтгэлзүйн тестүүд</a></li>
-          <li><a href="#lessons">Онлайн хичээлүүд</a></li>
-          <li><a href="#videos">Видео контент</a></li>
+          <li><a href="#benefits">Түншлэлийн ашиг</a></li>
+          <li><a href="#about">Оюунсанаа тухай</a></li>
+          <li><a href="#resources">Нөөц</a></li>
+          <li><a href="#contact">Холбоо барих</a></li>
         </ul>
       </nav>
       <div class="header-buttons">
@@ -26,52 +17,14 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text">
-      <h1>Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл</h1>
-      <p class="subtitle">Өөрийгөө ойлгож, бусдыг хайрлаж, амьдралаа гэрэлтүүлэх суурь нь энд оршино.</p>
-      <a href="#chat" class="btn-primary">Ярилцъя</a>
+      <h1><span class="highlight">Таны</span> хайж байсан дохио</h1>
+      <p>Оюунсанаа танд зориулсан платформ – таны сэтгэлд ойр туслагч.</p>
+      <a href="#start" class="btn-start">Энд дарж эхлээрэй</a>
     </div>
     <div class="hero-image">
-      <img src="assets/hero.jpg" alt="Оюунсанаа" />
-      <div class="floating-card">
-        <h3>Оюунсанаа гэж хэн бэ?</h3>
-        <p>Тэр таны дотор байгаа зөөлөн, ухаалаг дуу хоолой.</p>
-        <a href="#about" class="btn-outline">Дэлгэрэнгүй</a>
-      </div>
+      <img src="assets/oyunsanaa-photo.png" alt="Oyuunsanaa image" />
     </div>
   </section>
-
-  <!-- CTA Section -->
-  <section class="cta">
-    <h2>Таныг сонсох хэн нэгэн хэрэгтэй байна уу?</h2>
-    <a href="#chat" class="btn-filled">Ярилцъя</a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <h3>Цаг авах эсвэл зөвлөгөө авах уу?</h3>
-      <p>oyunsanaa.help@gmail.com</p>
-      <ul class="social-links">
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">YouTube</a></li>
-      </ul>
-      <p>© 2025 Oyunsanaa. Бүх эрх хуулиар хамгаалагдсан.</p>
-    </div>
-  </footer>
-
-  <script>
-    window.addEventListener("scroll", () => {
-      const footer = document.querySelector(".footer");
-      const footerTop = footer.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (footerTop < windowHeight) {
-        footer.classList.add("visible");
-      }
-    });
-  </script>
 </body>
-</html>
