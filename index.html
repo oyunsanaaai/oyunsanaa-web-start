@@ -1,33 +1,156 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oyunsanaa</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Оюунсанаа</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f8f0e9;
+      color: #4d2f26;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: #fff;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #4d2f26;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      position: relative;
+    }
+
+    .hero img {
+      width: 75%;
+      border-radius: 12px;
+    }
+
+    .overlay-panels {
+      position: absolute;
+      left: 5%;
+      top: 15%;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1.2rem 1.5rem;
+      border-radius: 10px;
+      max-width: 35%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .overlay-panels h3 {
+      margin-top: 0;
+      font-size: 18px;
+      margin-bottom: 0.8rem;
+    }
+
+    .cta-section {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .cta-section p {
+      margin: 4px 0;
+    }
+
+    .cta-section .small {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .cta-button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #a0522d;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .social-links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #4d2f26;
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .overlay-panels {
+        position: static;
+        max-width: 100%;
+        margin-top: 1.5rem;
+      }
+
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero img {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <img src="assets/logo.png" alt="Oyunsanaa logo" class="logo" />
-      <div class="auth-buttons">
-        <a href="#">Нэвтрэх</a>
-        <a href="#">Бүртгүүлэх</a>
-      </div>
-    </div>
-  </header>
 
-  <main>
-    <div class="hero">
-      <div class="hero-text">
-        <h1>Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл</h1>
-        <p>Оюунсанаа таны сэтгэлийн туслах. Өдөр тутмын тань найдвартай, дулаан зөвлөх.</p>
-        <a href="#" class="chat-btn">Ярилцъя</a>
-      </div>
-      <div class="hero-image">
-        <img src="assets/hero.jpg" alt="Oyuunsanaa image" />
+<header>
+  <img src="assets/logo.png" alt="Оюунсанаа лого">
+  <nav>
+    <a href="#">Төслийн танилцуулга</a>
+    <a href="#">Тестүүд</a>
+    <a href="#">Онлайн хичээл</a>
+    <a href="#">Видео контент</a>
+    <a href="#">Нэвтрэх</a>
+    <a href="#">Бүртгүүлэх</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="assets/hero.jpg" alt="Оюунсанаа">
+  <div class="overlay-panels">
+    <h3>Оюунсанаа гэж хэн бэ?</h3>
+    <h3>Таны сэтгэл ядарч байна уу?</h3>
+    <h3>Та ганцаардаагүй биз?</h3>
+
+    <div class="cta-section">
+      <p><strong>Таны сэтгэл зөвлөгөө хүсч байна уу?</strong></p>
+      <p class="small">Мэргэжлийн сэтгэлзүйчтэй холбогдоорой</p>
+      <button class="cta-button">Сэтгэлзүйчээс цаг авах</button>
+
+      <div class="social-links">
+        <a href="#">📘 Facebook</a>
+        <a href="#">📷 Instagram</a>
+        <a href="#">✉️ Email</a>
+        <a href="#">📞 Call</a>
       </div>
     </div>
-  </main>
+  </div>
+</section>
+
 </body>
 </html>
