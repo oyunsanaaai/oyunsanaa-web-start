@@ -1,3 +1,7 @@
+/* ------------------------------
+   Oyunsanaa Style - Based on Jot Design
+------------------------------ */
+
 :root {
   --primary-color: #781C30;
   --background-color: #F4EAE6;
@@ -29,6 +33,9 @@ body {
   justify-content: space-between;
 }
 
+/* ------------------------------
+   Header
+------------------------------ */
 .site-header {
   background-color: var(--white);
   border-bottom: 1px solid #e5e5e5;
@@ -39,7 +46,7 @@ body {
 }
 
 .logo {
-  height: 96px;
+  height: 84px;
   object-fit: contain;
 }
 
@@ -106,7 +113,9 @@ body {
   background-color: #5e1423;
 }
 
-/* Hero Section */
+/* ------------------------------
+   Hero Section
+------------------------------ */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -142,7 +151,7 @@ body {
 }
 
 .hero-image img {
-  max-width: 100%;
+  width: 85%;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -172,6 +181,11 @@ body {
   margin-bottom: 1rem;
 }
 
+.floating-card .btn-outline {
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+}
+
 @keyframes floatIn {
   0% {
     opacity: 0;
@@ -183,7 +197,9 @@ body {
   }
 }
 
-/* Footer */
+/* ------------------------------
+   Footer
+------------------------------ */
 .footer {
   background-color: var(--primary-color);
   color: var(--white);
@@ -207,7 +223,21 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Responsive */
+.footer a.social {
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.footer a.social:hover {
+  color: var(--accent-color);
+}
+
+/* ------------------------------
+   Responsive
+------------------------------ */
 @media (max-width: 768px) {
   .container,
   .hero {
@@ -235,6 +265,6 @@ body {
   }
 
   .logo {
-    height: 64px;
+    height: 72px;
   }
 }
