@@ -1,100 +1,116 @@
-/* Logo */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdf6f2;
+  color: #2e1d12;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
+}
+
 .logo {
-  height: 40px;
-  margin-top: 10px;
+  height: 50px;
+  object-fit: contain;
 }
 
-/* Navbar menu */
-.nav-menu ul {
+.auth-buttons {
   display: flex;
-  gap: 30px;
-  list-style: none;
+  gap: 12px;
 }
 
-.nav-menu a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-}
-
-.nav-menu a:hover {
-  border-bottom: 2px solid #fff;
-}
-
-/* Buttons */
-.header-buttons a {
-  margin-left: 10px;
+.login-btn,
+.signup-btn {
   padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  color: #5c3a2f;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.btn-outline {
-  border: 2px solid #fff;
-  color: #fff;
+.login-btn:hover,
+.signup-btn:hover {
+  color: #a15d3e;
 }
 
-.btn-outline:hover {
-  background-color: #fff;
-  color: #800020;
-}
-
-.btn-filled {
-  background-color: #f2c94c;
-  color: #000;
-}
-
-.btn-filled:hover {
-  background-color: #ffde59;
-}
-
-/* Hero Section */
-.hero {
+.hero-section {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #800020;
-  color: #fff;
-  padding: 80px 60px;
+  padding: 5% 8%;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
 }
 
 .hero-text h1 {
-  font-size: 48px;
+  font-size: 42px;
+  color: #5c3a2f;
+  margin-bottom: 20px;
 }
 
-.highlight {
-  background-color: #f2c94c;
-  padding: 0 10px;
-  border-radius: 4px;
-  color: #000;
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 24px;
+  color: #7b4e3e;
 }
 
-.btn-start {
-  display: inline-block;
-  margin-top: 20px;
+.cta-button {
+  background-color: #a15d3e;
+  color: white;
   padding: 12px 24px;
-  background-color: #f2c94c;
-  color: #000;
-  font-weight: bold;
-  border-radius: 6px;
+  border-radius: 30px;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #853f24;
+}
+
+.hero-image {
+  flex: 1;
 }
 
 .hero-image img {
-  width: 320px;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
   border-radius: 10px;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
   }
 }
