@@ -11,6 +11,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .logo {
@@ -27,7 +29,7 @@ body {
 .main-section {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 40px;
 }
@@ -54,6 +56,7 @@ body {
 
 .top-text {
   font-weight: bold;
+  margin-top: 0;
 }
 
 .sub-text {
@@ -71,6 +74,10 @@ body {
   cursor: pointer;
 }
 
+.consult-button:hover {
+  background-color: #8b472a;
+}
+
 .social-icons {
   margin-top: 16px;
   display: flex;
@@ -78,7 +85,31 @@ body {
   gap: 12px;
 }
 
+.social-icons a {
+  text-decoration: none;
+  color: #4a2c28;
+  font-weight: 500;
+}
+
 .hero-img {
   width: 75%;
   border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .main-section {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+
+  .hero-img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .left-panel {
+    align-items: center;
+  }
 }
