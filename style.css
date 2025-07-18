@@ -1,41 +1,101 @@
 :root {
   --primary-color: #781C30;
+  --background-color: #F4EAE6;
   --accent-color: #A78C7D;
   --text-color: #333;
-  --background-color: #F4EAE6;
   --white: #fff;
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Helvetica Neue', sans-serif; background:var(--background-color); color:var(--text-color); }
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
 
-/* Хөдөлгөөнгүй хэсэг */
+.main-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .fixed-hero {
-  position: sticky; top:0; z-index:100;
-  background:var(--white);
-  text-align:center;
-  padding:1rem;
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  z-index: 999;
 }
-.logo { height:90px; margin-bottom:0.5rem; }
-.tagline { font-size:1.3rem; font-weight:bold; color:var(--primary-color); margin-bottom:0.5rem; }
-.subtitle { font-size:1rem; color:var(--accent-color); margin-bottom:1rem; }
-.hero-img { width:70%; max-width:300px; border-radius:16px; box-shadow:0 8px 20px rgba(0,0,0,0.1); margin-bottom:1rem; }
-.chat-quote { font-size:1rem; font-family:'Georgia', serif; margin-bottom:0.5rem; }
-.chat-button {
-  display:inline-block; background:var(--primary-color); color:var(--white);
-  padding:0.6rem 1.4rem; font-weight:bold; border-radius:8px;
-  text-decoration:none; transition:background 0.3s;
+
+.logo {
+  height: 64px;
+  margin-bottom: 1rem;
 }
-.chat-button:hover { background:#5e1423; }
 
-/* Доош гүйлгэгддэг хэсэг */
-.scroll-section { padding:2rem 1rem; margin-top:1rem; }
-.nav-menu ul { list-style:none; }
-.nav-menu li { margin-bottom:0.8rem; }
-.nav-menu a { text-decoration:none; color:var(--accent-color); font-size:1.1rem; }
+.hero-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
 
-/* Хариу сайжруулалт (гар утас зэрэг) */
-@media(max-width:768px){
-  .tagline { font-size:1.1rem; }
-  .hero-img { width:80%; }
+.hero-subtitle {
+  color: var(--accent-color);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-image {
+  width: 90%;
+  max-width: 320px;
+  border-radius: 16px;
+  margin: 0 auto;
+  display: block;
+}
+
+.support-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.chat-btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.chat-btn:hover {
+  background-color: #5e1423;
+}
+
+.scroll-section {
+  padding: 4rem 2rem;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .fixed-hero {
+    padding: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    height: 80px;
+  }
 }
