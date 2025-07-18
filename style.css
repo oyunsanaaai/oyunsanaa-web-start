@@ -1,121 +1,41 @@
 :root {
   --primary-color: #781C30;
-  --background-color: #F4EAE6;
   --accent-color: #A78C7D;
-  --text-color: #333333;
-  --white: #ffffff;
+  --text-color: #333;
+  --background-color: #F4EAE6;
+  --white: #fff;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Helvetica Neue', sans-serif; background:var(--background-color); color:var(--text-color); }
 
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.5;
-}
-
-/* Fixed Top Section */
+/* Хөдөлгөөнгүй хэсэг */
 .fixed-hero {
-  position: sticky;
-  top: 0;
-  background-color: var(--background-color);
-  text-align: center;
-  padding: 1rem;
-  z-index: 1000;
+  position: sticky; top:0; z-index:100;
+  background:var(--white);
+  text-align:center;
+  padding:1rem;
 }
-
-.site-header .logo {
-  height: 80px;
-  margin-bottom: 0.5rem;
+.logo { height:90px; margin-bottom:0.5rem; }
+.tagline { font-size:1.3rem; font-weight:bold; color:var(--primary-color); margin-bottom:0.5rem; }
+.subtitle { font-size:1rem; color:var(--accent-color); margin-bottom:1rem; }
+.hero-img { width:70%; max-width:300px; border-radius:16px; box-shadow:0 8px 20px rgba(0,0,0,0.1); margin-bottom:1rem; }
+.chat-quote { font-size:1rem; font-family:'Georgia', serif; margin-bottom:0.5rem; }
+.chat-button {
+  display:inline-block; background:var(--primary-color); color:var(--white);
+  padding:0.6rem 1.4rem; font-weight:bold; border-radius:8px;
+  text-decoration:none; transition:background 0.3s;
 }
+.chat-button:hover { background:#5e1423; }
 
-.tagline {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
+/* Доош гүйлгэгддэг хэсэг */
+.scroll-section { padding:2rem 1rem; margin-top:1rem; }
+.nav-menu ul { list-style:none; }
+.nav-menu li { margin-bottom:0.8rem; }
+.nav-menu a { text-decoration:none; color:var(--accent-color); font-size:1.1rem; }
 
-.hero-content .subtitle {
-  color: var(--accent-color);
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.hero-img {
-  width: 70%;
-  max-width: 280px;
-  border-radius: 16px;
-  margin: 1rem auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.quote {
-  font-size: 1rem;
-  margin: 1rem 0 0.5rem;
-  color: var(--text-color);
-}
-
-.btn-primary {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-bottom: 1rem;
-}
-
-.btn-primary:hover {
-  background-color: #5e1423;
-}
-
-/* Scroll Section */
-.scroll-section {
-  padding: 2rem 1rem;
-  margin-top: 1rem;
-}
-
-.nav-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-menu li {
-  margin-bottom: 1rem;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: var(--accent-color);
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-/* Footer */
-.footer {
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 2rem;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-img {
-    width: 80%;
-  }
-
-  .tagline {
-    font-size: 1.1rem;
-  }
+/* Хариу сайжруулалт (гар утас зэрэг) */
+@media(max-width:768px){
+  .tagline { font-size:1.1rem; }
+  .hero-img { width:80%; }
 }
