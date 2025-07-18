@@ -20,6 +20,16 @@ body {
 }
 
 /* ------------------------------ Header ------------------------------ */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .site-header {
   background-color: var(--white);
   border-bottom: 1px solid #e5e5e5;
