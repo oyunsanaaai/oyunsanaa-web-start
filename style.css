@@ -1,116 +1,67 @@
 body {
+  font-family: sans-serif;
+  background-color: #f5eee8;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fdf6f2;
-  color: #2e1d12;
+  padding: 0;
+  color: #5c3b2e;
 }
 
-.top-header {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
-  background-color: transparent;
-  position: relative;
-  z-index: 10;
+  padding: 20px;
 }
 
 .logo {
-  height: 50px;
+  height: 60px;
   object-fit: contain;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-.auth-buttons {
+.auth-buttons a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #5c3b2e;
+  font-weight: bold;
+}
+
+.hero {
   display: flex;
-  gap: 12px;
-}
-
-.login-btn,
-.signup-btn {
-  padding: 8px 16px;
-  border: none;
-  background-color: transparent;
-  color: #5c3a2f;
-  font-weight: 500;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.login-btn:hover,
-.signup-btn:hover {
-  color: #a15d3e;
-}
-
-.hero-section {
-  display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 5% 8%;
-  gap: 40px;
+  padding: 60px 10%;
 }
 
 .hero-text {
-  flex: 1;
+  max-width: 500px;
 }
 
 .hero-text h1 {
-  font-size: 42px;
-  color: #5c3a2f;
-  margin-bottom: 20px;
+  font-size: 2.5em;
+  line-height: 1.2;
 }
 
 .hero-text p {
-  font-size: 18px;
-  margin-bottom: 24px;
-  color: #7b4e3e;
+  margin: 20px 0;
+  font-size: 1.1em;
 }
 
-.cta-button {
-  background-color: #a15d3e;
-  color: white;
+.chat-btn {
+  display: inline-block;
   padding: 12px 24px;
+  background-color: #a26c50;
+  color: #fff;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #853f24;
-}
-
-.hero-image {
-  flex: 1;
 }
 
 .hero-image img {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
+  width: 350px;
   border-radius: 10px;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 30px;
-  }
-
-  .hero-text p {
-    font-size: 16px;
-  }
-
-  .auth-buttons {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 6px;
-  }
+  object-fit: cover;
 }
