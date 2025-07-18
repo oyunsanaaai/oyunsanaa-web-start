@@ -21,29 +21,22 @@ body {
 
 /* Container */
 .container {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Header */
 .site-header {
   background-color: var(--white);
-  border-bottom: 1px solid #e5e5e5;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 1rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.site-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .logo {
@@ -51,8 +44,8 @@ body {
 }
 
 .nav-menu ul {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 2rem;
 }
 
@@ -72,6 +65,7 @@ body {
   gap: 1rem;
 }
 
+/* Buttons */
 .btn-outline,
 .btn-filled,
 .btn-primary {
@@ -84,50 +78,46 @@ body {
 
 .btn-outline {
   border: 2px solid var(--accent-color);
-  background-color: transparent;
+  background: transparent;
   color: var(--accent-color);
 }
 
 .btn-outline:hover {
-  background-color: var(--accent-color);
+  background: var(--accent-color);
   color: var(--white);
 }
 
 .btn-filled {
-  background-color: var(--accent-color);
+  background: var(--accent-color);
   color: var(--white);
   border: none;
 }
 
 .btn-filled:hover {
-  background-color: #8a6d5a;
+  background: #8a6d5a;
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color: var(--white);
   border: none;
 }
 
 .btn-primary:hover {
-  background-color: #5e1423;
+  background: #5e1423;
 }
 
 /* Hero */
 .hero {
-  background-color: var(--white);
-  padding: 4rem 0;
-}
-
-.hero-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  background-color: var(--white);
 }
 
 .hero-text {
-  flex: 1 1 50%;
   max-width: 600px;
   margin-bottom: 2rem;
 }
@@ -140,12 +130,12 @@ body {
 
 .subtitle {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
   color: var(--accent-color);
+  margin-bottom: 2rem;
 }
 
 .hero-image {
-  flex: 1 1 40%;
+  max-width: 400px;
   position: relative;
   text-align: center;
 }
@@ -156,16 +146,17 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Floating card */
 .floating-card {
   position: absolute;
   bottom: -2rem;
-  right: 2rem;
+  right: 1rem;
   background-color: var(--background-color);
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 280px;
-  animation: floatIn 1s ease forwards;
+  text-align: left;
 }
 
 .floating-card h3 {
@@ -178,17 +169,6 @@ body {
   font-size: 1rem;
   color: var(--text-color);
   margin-bottom: 1rem;
-}
-
-@keyframes floatIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Footer */
@@ -217,14 +197,10 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero-container {
+  .container {
     flex-direction: column;
+    gap: 1rem;
     text-align: center;
-  }
-
-  .floating-card {
-    position: static;
-    margin-top: 2rem;
   }
 
   .nav-menu ul {
@@ -234,14 +210,15 @@ body {
 
   .header-buttons {
     flex-direction: column;
-    gap: 0.5rem;
   }
 
-  .logo {
-    height: 56px;
+  .hero {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .hero-text h1 {
-    font-size: 2rem;
+  .floating-card {
+    position: static;
+    margin-top: 2rem;
   }
 }
