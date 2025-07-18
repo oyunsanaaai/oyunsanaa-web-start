@@ -19,32 +19,35 @@ body {
   line-height: 1.6;
 }
 
-/* ------------------------------ Header ------------------------------ */
+/* Container */
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
+/* Header */
 .site-header {
   background-color: var(--white);
   border-bottom: 1px solid #e5e5e5;
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  height: 72px;
-  object-fit: contain;
+  height: 64px;
 }
 
 .nav-menu ul {
@@ -110,19 +113,21 @@ body {
   background-color: #5e1423;
 }
 
-/* ------------------------------ Hero Section ------------------------------ */
+/* Hero */
 .hero {
+  background-color: var(--white);
+  padding: 4rem 0;
+}
+
+.hero-container {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 2rem;
-  background-color: var(--white);
-  position: relative;
+  flex-wrap: wrap;
 }
 
 .hero-text {
-  flex: 1 1 400px;
+  flex: 1 1 50%;
   max-width: 600px;
   margin-bottom: 2rem;
 }
@@ -140,9 +145,9 @@ body {
 }
 
 .hero-image {
-  flex: 1 1 300px;
-  text-align: center;
+  flex: 1 1 40%;
   position: relative;
+  text-align: center;
 }
 
 .hero-image img {
@@ -151,7 +156,6 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Floating Card */
 .floating-card {
   position: absolute;
   bottom: -2rem;
@@ -161,7 +165,6 @@ body {
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 280px;
-  text-align: left;
   animation: floatIn 1s ease forwards;
 }
 
@@ -188,7 +191,7 @@ body {
   }
 }
 
-/* ------------------------------ Footer ------------------------------ */
+/* Footer */
 .footer {
   background-color: var(--primary-color);
   color: var(--white);
@@ -212,31 +215,11 @@ body {
   margin-bottom: 2rem;
 }
 
-/* ------------------------------ Responsive ------------------------------ */
+/* Responsive */
 @media (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  .header-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .hero {
+  .hero-container {
     flex-direction: column;
     text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
   }
 
   .floating-card {
@@ -244,7 +227,21 @@ body {
     margin-top: 2rem;
   }
 
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   .logo {
-    height: 64px;
+    height: 56px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
   }
 }
