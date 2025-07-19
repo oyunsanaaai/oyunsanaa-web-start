@@ -1,99 +1,63 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: #fdf6f0;
-  color: #5d2c1d;
+  font-family: "Noto Sans", sans-serif;
+  background: #fdf8f6;
+  color: #3c2c23;
 }
 
-header {
+.top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 40px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
   height: 50px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-}
-
-nav ul li a {
+.menu a {
+  margin: 0 12px;
   text-decoration: none;
-  color: #5d2c1d;
-  font-weight: 600;
+  color: #333;
+  font-weight: 500;
 }
 
 .hero {
   display: flex;
-  padding: 40px;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
 }
 
-.hero-left {
-  flex: 1;
+.hero-text {
+  max-width: 600px;
+}
+
+.slogan {
+  font-size: 36px;
+  font-weight: bold;
+  color: #772f2f;
+}
+
+.sub-text {
+  font-size: 18px;
+  margin-top: 12px;
+}
+
+.floating-buttons {
+  margin: 30px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-}
-
-.window-box {
-  background: #fff3ec;
-  border: 1px solid #a78c7d;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.cta-box {
-  text-align: center;
-  background-color: #ffe6d4;
-  border: 1px dashed #a78c7d;
-  padding: 20px;
-  border-radius: 12px;
-}
-
-.cta-box button {
-  background-color: #a3684a;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.cta-header {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.cta-sub {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.hero-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image {
-  width: 75%;
-  border-radius: 20px;
-}
-
-.social-icons {
-  display: flex;
   gap: 10px;
-  justify-content: center;
-  margin-top: 10px;
+  animation: floatIn 2s ease-in-out;
 }
+
+.floating-buttons button {
+  background-color: #fff5f5;
+  border
+Sent
+Write to
