@@ -5,27 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Оюунсанаа</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Inter', sans-serif;
     }
     body {
-      background-color: #F4EAE6;
-      color: #A78C7D;
+      background-color: #f2e7dc;
+      color: #4c5175;
       overflow-x: hidden;
-    }
-    p, li, a, span, strong {
-      color: #5A2A27;
     }
     header {
       display: flex; justify-content: space-between; align-items: center;
       padding: 20px 100px;
       position: fixed;
-      width: 100%; background-color: #F4EAE6; z-index: 10;
+      width: 100%; background-color: #f2e7dc; z-index: 10;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      border-bottom: 4px solid #E9B9B9;
     }
     .logo img {
       height: 60px;
@@ -41,12 +36,12 @@
     nav a {
       text-decoration: none;
       font-size: 10px;
-      color: #A78C7D;
+      color: #4c5175;
       font-weight: 500;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #801C1C;
+      color: #facc15;
     }
     .actions {
       display: flex; gap: 10px;
@@ -60,18 +55,18 @@
     }
     .login {
       background-color: transparent;
-      border: 1px solid #801C1C;
-      color: #801C1C;
+      border: 1px solid #4c5175;
+      color: #4c5175;
     }
     .signup {
-      background-color: #801C1C;
+      background-color: #4c5175;
       color: white;
     }
     .hero {
       display: flex;
       align-items: center;
       padding: 100px 100px 60px;
-      background-color: #F4EAE6;
+      background-color: #f2e7dc;
       min-height: 100vh;
       gap: 80px;
     }
@@ -88,29 +83,37 @@
     .hero-text h1 {
       font-size: 34px;
       font-weight: 800;
-      color: #5A2A27;
+      color: #4c5175;
       margin-bottom: 20px;
-      font-family: 'Satisfy', cursive;
+      font-family: 'Inter', sans-serif;
     }
     .hero-text p {
       font-size: 18px;
       margin-bottom: 30px;
+      color: #4c5175;
     }
     .chat-button {
-      background-color: #801C1C;
+      background-color: #4c5175;
       color: white;
-      padding: 12px 24px;
-      font-size: 14px;
-      border-radius: 8px;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
       border: none;
       cursor: pointer;
-      transition: transform 0.3s;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     .chat-button:hover {
-      transform: translateY(-2px);
+      background-color: #facc15;
+      color: #4c5175;
+      transform: translateY(-4px);
     }
     h1, h2, h3, h4, h5, h6 {
-      color: #5A2A27;
+      color: #4c5175;
+    }
+    p, li, a, span, strong {
+      color: #4c5175;
     }
     @keyframes fadeInUp {
       0% {
@@ -155,13 +158,13 @@
   <div class="hero-text">
     <h1>Сэтгэлийн боловсрол</h1>
     <p>Өөрийгөө ойлгох, удирдах, хөгжүүлэх замд тань хамт байна.</p>
-    <button class="chat-button">Ярилцъя</button>
+    <button class="chat-button">💬 Ярилцья</button>
   </div>
 </section>
 
-<section class="about" style="display: flex; align-items: center; justify-content: center; padding: 100px 100px 60px; background-color: #F4EAE6;">
+<section class="about" style="display: flex; align-items: center; justify-content: center; padding: 100px 100px 60px; background-color: #f2e7dc;">
   <div class="about-text" style="max-width: 800px; animation: fadeInUp 1.4s ease forwards; text-align: center;">
-    <h2 style="font-size: 28px; margin-bottom: 20px; font-weight: 700; color: #5A2A27;">Оюунсанаа гэж хэн бэ?</h2>
+    <h2 style="font-size: 28px; margin-bottom: 20px; font-weight: 700;">Оюунсанаа гэж хэн бэ?</h2>
     <p style="font-size: 16px; line-height: 1.8;">
       Оюунсанаа нь сэтгэлзүйн боловсролыг энгийн, хүртээмжтэй хэлбэрээр олон нийтэд хүргэх зорилготой платформ юм. Бид өөрийгөө ойлгох, бусдыг ойлгох, амьдралаа илүү утга учиртай, ухаалаг, дотоод амар амгалангаар дүүрэн болгоход тань тусална.
     </p>
@@ -170,6 +173,3 @@
 
 </body>
 </html>
-
-
-
