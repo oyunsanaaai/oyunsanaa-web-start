@@ -1,251 +1,115 @@
 <!DOCTYPE html>
 <html lang="mn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Оюунсанаа</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      background-color: #f2e7dc;
-      color: #a65c48;
-      overflow-x: hidden;
-    }
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(80px);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оюунсанаа – Сэтгэлийн боловсрол</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&family=DM+Serif+Display&family=EB+Garamond:wght@500&display=swap');
+      .fancy-title {
+        font-family: 'DM Serif Display', serif;
       }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
+      body {
+        font-family: 'Quicksand', sans-serif;
       }
-    }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
+      .soft-button {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #5A2A27;
+        padding: 0.3rem 0.8rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        border: none;
+        transition: background-color 0.3s ease;
       }
-    }
-    header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 20px 100px;
-      position: fixed;
-      width: 100%; background-color: #f2e7dc; z-index: 10;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    .logo img {
-  height: 60px;
-  transition: filter 0.3s;
-  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.1));
-}
-    .logo:hover img {
-      filter: brightness(1.2);
-    }
-    nav ul {
-      display: flex; list-style: none; gap: 24px;
-      margin-left: 0;
-    }
-    nav a {
-      text-decoration: none;
-      font-size: 10px;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #5a67d8;
-    }
-    .actions {
-      display: flex; gap: 10px;
-    }
-    .login, .signup {
-      font-size: 10px;
-      padding: 5px 10px;
-      border-radius: 4px;
-      font-weight: 500;
-      transition: all 0.3s;
-    }
-    .login {
-      border: 1px solid #5a67d8;
-      background-color: white;
-      color: #5a67d8;
-    }
-    .login:hover {
-      background-color: #edf2ff;
-    }
-    .signup {
-      background-color: #4c5175;
-      color: #a65c48;
-    }
-    .signup:hover {
-      background-color: #facc15;
-    }
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 100px 100px 60px;
-      background-color: #f2e7dc;
-      min-height: 100vh;
-    }
-    .hero-text {
-      max-width: 600px;
-      opacity: 0;
-      transform: translateY(40px);
-      animation: fadeInUp 1.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-      animation-delay: 0.2s;
-    }
-    .hero-text h1 {
-      font-size: 42px;
-      font-weight: 800;
-      color: #4c5175;
-      margin-bottom: 20px;
-    }
-    .hero-text p {
-      font-size: 18px;
-      color: #4c5175;
-      margin-bottom: 30px;
-    }
-    .chat-button {
-      background-color: #4c5175;
-      color: white;
-      padding: 12px 24px;
-      font-size: 14px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .chat-button:hover {
-      transform: translateY(-2px);
-    }
-    .hero-image {
-      opacity: 0;
-      transform: translateY(40px);
-      animation: fadeInUp 1s ease-out forwards;
-      animation-delay: 0.4s;
-    }
-    .hero-image img {
-      max-width: 500px;
-      width: 100%;
-      border-radius: 60px 0 60px 0;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
-    @media (max-width: 1024px) {
-      nav ul {
-        gap: 20px;
-        margin-left: 20px;
+      .soft-button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
       }
-    }
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-      }
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin: 10px 0;
-      }
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 280px;
-      }
-      .hero-image {
-        margin-top: 40px;
-      }
-    }
-  @keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-$1
-<body>
-  <header>
-  <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-    <div style="display: flex; align-items: center; gap: 40px;">
-      <div class="logo" style="background-color: white; padding: 6px 12px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-  <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/logo.png?raw=true" alt="Оюунсанаа лого" style="height: 52px;">
-</div>
-      <nav>
-        <ul>
-          <li><a href="#">Төслийн танилцуулга</a></li>
-          <li><a href="#">Сэтгэлзүйн тестүүд</a></li>
-          <li><a href="#">Онлайн хичээлүүд</a></li>
-          <li><a href="#">Видео контентүүд</a></li>
-          <li><a class="login" href="#">Нэвтрэх</a></li>
-          <li><a class="signup" href="#">Бүртгүүлэх</a></li>
-        </ul>
+    </style>
+  </head>
+  <body class="bg-[#F4EAE6] text-[#5A2A27]">
+    <header class="flex justify-between items-center px-8 py-6 bg-white shadow-md relative">
+      <div class="flex items-center space-x-2">
+        <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/logo.png?raw=true" alt="Oyunsanaa Logo" class="h-24 w-auto">
+      </div>
+      <button class="md:hidden text-xl" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        ☰
+      </button>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#" class="hover:underline">Төслийн танилцуулга</a>
+        <a href="#" class="hover:underline">Тестүүд</a>
+        <a href="#" class="hover:underline">Онлайн хичээл</a>
+        <a href="#" class="hover:underline">Видео контент</a>
       </nav>
+      <div class="hidden md:block text-sm text-gray-600">(976) 9911-2233</div>
+      <div id="mobileMenu" class="md:hidden absolute top-16 left-0 w-full bg-white shadow-md hidden px-8 py-4 space-y-3">
+        <a href="#" class="block hover:underline">Төслийн танилцуулга</a>
+        <a href="#" class="block hover:underline">Тестүүд</a>
+        <a href="#" class="block hover:underline">Онлайн хичээл</a>
+        <a href="#" class="block hover:underline">Видео контент</a>
+        <div class="text-sm text-gray-600">(976) 9911-2233</div>
+      </div>
+    </header>
+
+    <section class="flex flex-col lg:flex-row items-center justify-between px-10 pt-10 pb-16 bg-white shadow-sm max-w-[1500px] mx-auto rounded-xl mt-2">
+      <div class="lg:w-1/2 space-y-6">
+        <h1 class="text-4xl lg:text-5xl font-bold leading-snug fancy-title mt-[-1rem]">
+          Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл
+        </h1>
+        <p class="text-gray-700" style="font-family: 'EB Garamond', serif;">
+          Сэтгэлээ хуваалцах, ойлгогдох, тайвшрах орон зай.<br />Чамайг ойлгож сонсох Оюунсанаа байна.
+        </p>
+        <div class="grid grid-cols-2 gap-3 text-sm text-gray-600">
+          <span class="border rounded-full px-3 py-1 text-center">5000+ ярилцсан</span>
+          <span class="border rounded-full px-3 py-1 text-center">95% сэтгэл ханамж</span>
+          <span class="border rounded-full px-3 py-1 text-center">365 өдрийн зөвлөгөө</span>
+          <span class="border rounded-full px-3 py-1 text-center">10+ жилийн туршлага</span>
+        </div>
+        <div class="flex gap-4 pt-4">
+          <button class="bg-[#A78C7D] text-white px-5 py-2 rounded-full transition hover:bg-[#8b7265]">Ярилцъя</button>
+          <button class="border border-[#A78C7D] text-[#5A2A27] px-5 py-2 rounded-full transition hover:bg-[#F4EAE6]">Дэлгэрэнгүй</button>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 mt-10 lg:mt-0 relative">
+        <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/hero.jpg?raw=true" alt="Сэтгэл зүйн зөвлөгөөний зураг" class="rounded-2xl w-full max-h-[600px] object-contain object-top">
+        <div class="absolute bottom-4 left-6 flex flex-wrap gap-2 max-w-[90%]">
+          <button class="soft-button">Оюунсанаатай ярилцъя</button>
+          <button class="soft-button">Оюунсанаатай ярилцъя</button>
+          <button class="soft-button">Оюунсанаатай ярилцъя</button>
+          <button class="soft-button">Оюунсанаатай ярилцъя</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="fixed bottom-5 right-5 w-64 h-80">
+      <iframe src="https://oyunsanaa-chatbot.vercel.app" class="w-full h-full rounded-xl shadow-lg border" title="Chatbot" loading="lazy"></iframe>
     </div>
-  </div>
-</header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1 style="margin-left: 0; margin-top: -120px; font-size: 34px; line-height: 1.3; font-family: 'Satisfy', cursive;">Сэтгэлийн боловсролоор амьдралаа гэрэлтүүл</h1>
-      <p>Өөрийгөө ойлгож, бусдыг хайрлаж, амьдралаа гэрэлтүүлэх суурь нь энд оршино.</p>
-      <button class="chat-button" style="margin-top: 16px;">Ярилцая</button>
-    </div>
-    <div class="hero-image">
-  <div style="position: relative;">
-    <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/hero.jpg?raw=true" alt="Оюунсанаагийн зураг" style="max-width: 360px; width: 100%; border-radius: 60px 0 60px 0; box-shadow: 0 8px 24px rgba(0,0,0,0.1); margin-top: -40px;">
-    <div style="position: absolute; bottom: 40px; left: -80px; width: 180px;
-  background: #a65c48;
-  border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  padding: 16px 12px;
-  opacity: 0;
-  transform: translateX(-40px);
-  animation: slideInLeft 1.2s ease-out forwards;">
-  <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
-    <li><a href="#" style="text-decoration: none; font-size: 12px; color: #fff; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">Оюунсанаа гэж хэн бэ? <span>›</span></a></li>
-    <li><a href="#" style="text-decoration: none; font-size: 13px; color: #1e40af; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">Бидний зорилго <span>›</span></a></li>
-    <li><a href="#" style="text-decoration: none; font-size: 13px; color: #1e40af; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">Хэрхэн ажилладаг вэ? <span>›</span></a></li>
-    <li><a href="#" style="text-decoration: none; font-size: 13px; color: #1e40af; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">Холбоо барих <span>›</span></a></li>
-  </ul>
-  <button style="margin-top: 20px; width: 100%; padding: 8px; background-color: #fff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">Бүртгүүлэх</button>
-</div>
-  </div>
-</div>
-  </section>
-
-  <section style="padding: 80px 100px; background-color: #fdfdfd; display: flex; flex-direction: column; align-items: center; text-align: center;">
-  <h2 style="font-size: 28px; font-weight: 600; color: #1e40af; margin-bottom: 20px; font-family: 'Inter', sans-serif; animation: fadeInUp 1s ease-out forwards; opacity: 0; transform: translateY(20px);">Таны сэтгэл зөвлөгөө хүсч байна уу?</h2>
-  <p style="font-size: 14px; color: #555; margin-bottom: 20px; animation: fadeInUp 1.2s ease-out forwards; opacity: 0; transform: translateY(20px);">Мэргэжлийн сэтгэлзүйчтэй холбогдох</p>
-  <button style="padding: 12px 28px; background-color: #5a67d8; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; animation: fadeInUp 1.4s ease-out forwards; opacity: 0; transform: translateY(20px);">
-    Сэтгэлзүйчээс цаг авах
-  </button>
-</section>
-
-  
-
-  <footer style="background-color:#eef2ff; text-align:center; padding:40px 20px; font-size:14px; color:#555;">
-    <p style="margin-bottom:10px; animation: fadeInUp 1.2s ease-out forwards; opacity: 0; transform: translateY(40px);">Таны сэтгэлийг сонсох платформ - Оюунсанаа</p>
-    <p style="animation: fadeInUp 1.4s ease-out forwards; opacity: 0; transform: translateY(40px);">© 2025 Oyunsanaa. Бүх эрх хуулиар хамгаалагдсан.</p>
-  <div style="margin-top: 20px; display: flex; justify-content: center; gap: 20px; animation: fadeInUp 1.6s ease-out forwards; opacity: 0; transform: translateY(40px);">
-  <a href="#" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Facebook" style="width: 24px; height: 24px;"></a>
-  <a href="#" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174876.png" alt="Instagram" style="width: 24px; height: 24px;"></a>
-  <a href="#" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="width: 24px; height: 24px;"></a>
-  <a href="mailto:example@mail.com"><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" style="width: 24px; height: 24px;"></a>
-</div>
-</footer>
-</body>
+    <footer class="bg-[#5A2A27] text-white px-10 py-10 mt-10">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-2xl font-bold mb-2">Oyunsanaa</div>
+          <p class="text-sm">Сэтгэлийн боловсрол – Танд зориулсан орон зай</p>
+        </div>
+        <div class="space-y-2">
+          <h4 class="font-semibold mb-2">Холбоос</h4>
+          <ul class="text-sm space-y-1">
+            <li><a href="#" class="hover:underline">Төслийн танилцуулга</a></li>
+            <li><a href="#" class="hover:underline">Тестүүд</a></li>
+            <li><a href="#" class="hover:underline">Онлайн хичээл</a></li>
+            <li><a href="#" class="hover:underline">Видео контент</a></li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h4 class="font-semibold mb-2">Холбоо барих</h4>
+          <p class="text-sm">Утас: (976) 9911-2233</p>
+          <p class="text-sm">И-мэйл: info@oyunsanaa.mn</p>
+        </div>
+      </div>
+      <div class="text-center text-xs text-gray-300 mt-8">© 2025 Oyunsanaa. Бүх эрх хуулиар хамгаалагдсан.</div>
+    </footer>
+  </body>
 </html>
 
 
