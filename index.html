@@ -2,54 +2,151 @@
 <html lang="mn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Оюунсанаа</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f7f8fc;
+      color: #222;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 40px;
+      position: fixed;
+      width: 100%; background-color: white; z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .logo img {
+      height: 40px;
+      transition: filter 0.3s;
+    }
+    .logo:hover img {
+      filter: brightness(1.2);
+    }
+    nav ul {
+      display: flex; list-style: none; gap: 30px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #5a67d8;
+    }
+    .actions {
+      display: flex; gap: 15px;
+    }
+    .login {
+      border: 1px solid #5a67d8;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background-color: white;
+      color: #5a67d8;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+    .login:hover {
+      background-color: #edf2ff;
+    }
+    .signup {
+      background-color: #fbbf24;
+      color: black;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .signup:hover {
+      background-color: #facc15;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 140px 40px 80px;
+      background-color: #eef2ff;
+      min-height: 100vh;
+    }
+    .hero-text {
+      max-width: 600px;
+    }
+    .hero-text h1 {
+      font-size: 42px;
+      font-weight: 800;
+      color: #1e40af;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 18px;
+      color: #334155;
+      margin-bottom: 30px;
+    }
+    .chat-button {
+      background-color: #5a67d8;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .chat-button:hover {
+      transform: translateY(-2px);
+    }
+    .hero-image img {
+      max-width: 500px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-image {
+        margin-top: 40px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="top-bar">
-    <img src="logo.png" alt="Оюунсанаа лого" class="logo" />
-    <nav class="menu">
-      <a href="#">Төслийн танилцуулга</a>
-      <a href="#">Тестүүд</a>
-      <a href="#">Онлайн хичээл</a>
-      <a href="#">Видео контент</a>
-      <a href="#">Нэвтрэх</a>
-      <a href="#">Бүртгүүлэх</a>
+  <header>
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/oyunsanaaai/oyunsanaa-web-start/main/assets/oyunsanaa_logo.png" alt="Оюунсанаа лого">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Төслийн танилцуулга</a></li>
+        <li><a href="#">Сэтгэлзүйн тестүүд</a></li>
+        <li><a href="#">Онлайн хичээлүүд</a></li>
+        <li><a href="#">Видео контентүүд</a></li>
+      </ul>
     </nav>
+    <div class="actions">
+      <a class="login" href="#">Нэвтрэх</a>
+      <a class="signup" href="#">Бүртгүүлэх</a>
+    </div>
   </header>
 
-  <main class="hero">
+  <section class="hero">
     <div class="hero-text">
-      <h1 class="slogan">Сэтгэлийн боловсролоор<br>амьдралаа гэрэлтүүл</h1>
-      <p class="sub-text">Өөрийгөө ойлгож, бусдыг хүндэлж, хайрлах ухааныг сурах цаг боллоо.</p>
-
-      <div class="floating-buttons">
-        <button>Оюунсанаа гэж хэн бэ?</button>
-        <button>Таны сэтгэл ядарч байна уу?</button>
-        <button>Та ганцаардаагүй биз?</button>
-      </div>
-
-      <div class="consult-box">
-        <p class="consult-title">Таны сэтгэл зөвлөгөө хүсч байна уу?</p>
-        <p class="consult-sub">Мэргэжлийн сэтгэлзүйчтэй холбогдоорой</p>
-        <button class="consult-btn">Сэтгэлзүйчээс цаг авах</button>
-      </div>
-
-      <div class="social-icons">
-        <a href="#">📩</a>
-        <a href="#">📞</a>
-        <a href="#">📱</a>
-      </div>
+      <h1>Сэтгэлийн боловсролоор амьдралаа гэрэлтүүл</h1>
+      <p>Өөрийгөө ойлгож, бусдыг хайрлаж, амьдралаа гэрэлтүүлэх суурь нь энд оршино.</p>
+      <button class="chat-button">Ярилцая</button>
     </div>
-
     <div class="hero-image">
-      <img src="oyunsanaa.png" alt="Оюунсанаа" />
+      <img src="https://raw.githubusercontent.com/oyunsanaaai/oyunsanaa-web-start/main/assets/oyunsanaa_woman.png" alt="Оюунсанаагийн зураг">
     </div>
-  </main>
-
-  <footer>
-    <p>© 2025 Оюунсанаа – Сэтгэлийн боловсрол</p>
-  </footer>
+  </section>
 </body>
 </html>
