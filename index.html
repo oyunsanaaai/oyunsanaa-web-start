@@ -10,13 +10,20 @@
     body {
       font-family: 'Inter', sans-serif;
     }
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 1s ease-out forwards;
+    }
   </style>
 </head>
-<body class="bg-gradient-to-b from-[#F4EAE6] via-white to-[#F4EAE6] text-[#5A2A27]">
+<body class="bg-[#F4EAE6] text-[#5A2A27]">
 
 <!-- Header -->
 <header class="relative z-10 flex items-center justify-between px-8 py-4 shadow-sm bg-[#F4EAE6] border-b border-[#E9B9B9] sticky top-0">
-  <div class="flex items-center gap-6">
+  <div class="flex items-center gap-12">
     <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/logo.png?raw=true" alt="Лого" class="h-12">
     <nav>
       <ul class="hidden md:flex gap-6 text-sm font-medium">
@@ -27,14 +34,14 @@
       </ul>
     </nav>
   </div>
-  <div class="hidden md:flex gap-4">
+  <div class="hidden md:flex gap-2">
     <a href="#" class="text-sm border border-[#5A2A27] px-4 py-1 rounded-full hover:bg-[#5A2A27] hover:text-white">Нэвтрэх</a>
     <a href="#" class="text-sm bg-[#5A2A27] text-white px-4 py-1 rounded-full hover:bg-[#A78C7D]">Бүртгүүлэх</a>
   </div>
 </header>
 
 <!-- Hero Section -->
-<section class="relative z-10 flex flex-col md:flex-row items-center justify-between px-8 md:px-24 pt-6 pb-20 md:pt-2 md:pb-28 gap-12">
+<section class="relative z-10 flex flex-col md:flex-row items-center justify-between px-8 md:px-24 pt-6 pb-20 md:pt-2 md:pb-28 gap-12 bg-gradient-to-b from-[#F4EAE6] via-white to-[#F4EAE6]">
   <!-- Text Side -->
   <div class="md:w-1/2 space-y-6 text-center md:text-left -mt-40">
     <h1 class="text-4xl md:text-5xl font-bold leading-snug">
@@ -42,11 +49,20 @@
       <span class="inline-block md:ml-8">амьдралаа гэрэлтүүл</span>
     </h1>
     <p class="text-[#A78C7D] text-lg max-w-xl mx-auto pt-2 text-center">
-      <span class="block">Өөрийгөө ойлгож, бусдыг хайрлаж</span>
-      <span class="block">амьдралаа гэрэлтүүлэх суурь нь энд оршино.</span>
+      <span class="block">Өөрийгәө ойлгож, бусдыг хайрлаж</span>
+      <span class="block text-center">амьдралаа гэрэлтүүлэх суурь нь энд оршино.</span>
     </p>
     <div class="flex justify-center">
       <button class="bg-[#5A2A27] text-white px-6 py-3 rounded-full hover:bg-[#A78C7D]">💬 Ярилцья</button>
+    </div>
+
+    <!-- Video Text Slider Section (positioned under Ярилцья) -->
+    <div class="pt-8">
+      <div class="h-16 relative overflow-hidden text-lg text-[#5A2A27] font-semibold">
+        <div id="textSlider" class="absolute inset-0 flex items-center justify-center transition-opacity duration-1000">
+          <span class="slider-text">Сэтгэлээ сонс</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -55,32 +71,70 @@
     <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/hero.jpg?raw=true" alt="Оюунсанаа" class="w-full max-w-md mx-auto rounded-[60px_0_60px_0] shadow-2xl">
 
     <!-- Floating Box -->
-    <div class="absolute bottom-[-80px] left-[-50px] bg-white bg-opacity-50 shadow-xl rounded-xl p-4 w-52 hidden md:block">
+    <div class="absolute bottom-[60px] left-[-40px] bg-white/60 shadow-xl rounded-xl p-4 w-52 hidden md:block">
       <ul class="text-sm space-y-2">
-        <li><a href="#" class="text-[#5A2A27] font-semibold">🔸 Оюунсанаа гэж хэн бэ?</a></li>
-        <li><a href="#" class="text-[#5A2A27] font-semibold">✨ Үндсэн ойлголтууд</a></li>
-        <li><a href="#" class="text-[#5A2A27] font-semibold">📘 Хэрэглэгчийн түүхүүд</a></li>
-        <li><a href="#" class="text-[#5A2A27] font-semibold">📞 Холбогдох</a></li>
+        <li><a href="#" class="text-[#5A2A27] font-semibold">Оюунсанаа гэж хэн бэ?</a></li>
+        <li><a href="#" class="text-[#5A2A27] font-semibold">Тэр юу хийдэг вэ?</a></li>
+        <li><a href="#" class="text-[#5A2A27] font-semibold">Хэнд зориулагдсан бэ?</a></li>
+        <li><a href="#" class="text-[#5A2A27] font-semibold">Таньд юу өгч чадах вэ?</a></li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- Footer Section -->
-<footer class="bg-white py-10 mt-28 shadow-inner">
-  <div class="max-w-md mx-auto text-center text-sm space-y-2 text-[#5A2A27]">
-    <div class="text-base font-semibold">💬 Сэтгэлзүйчээс цаг авах</div>
-    <div><span class="font-medium">Instagram:</span> <a href="https://instagram.com/oyunsanaa" class="text-blue-700">@oyunsanaa</a></div>
-    <div><span class="font-medium">Facebook:</span> <a href="https://facebook.com/oyunsanaa" class="text-blue-700">Oyunsanaa</a></div>
-    <div><span class="font-medium">Email:</span> <a href="mailto:info@oyunsanaa.com" class="text-blue-700">info@oyunsanaa.com</a></div>
+<script>
+  const texts = [
+    "Сэтгэлээ сонс",
+    "Өөрийгөө ойлго",
+    "Бусдыг хайрла",
+    "Амьдралаа гэрэлтүүл"
+  ];
+  let index = 0;
+  const slider = document.getElementById("textSlider");
+  setInterval(() => {
+    index = (index + 1) % texts.length;
+    slider.classList.add("opacity-0");
+    setTimeout(() => {
+      slider.innerHTML = `<span class="slider-text">${texts[index]}</span>`;
+      slider.classList.remove("opacity-0");
+    }, 500);
+  }, 3000);
+</script>
+
+<!-- Video Section -->
+<section class="px-6 pt-8 pb-16">
+  <div class="max-w-4xl mx-auto">
+    <video class="w-full rounded-2xl shadow-lg" autoplay muted loop>
+      <source src="https://github.com/oyunsanaaai/oyunsanaa-web-start/raw/main/assets/oyunsanaa-intro.mp4" type="video/mp4">
+      Таны хөтөч видео тоглуулах боломжгүй байна.
+    </video>
+  </div>
+</section>
+
+<!-- Сэтгэлзүйчтэй холбогдох хэсэг -->
+<section class="mt-10 px-4 pt-14 pb-8">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-xl font-semibold mb-3">💬 Сэтгэлзүйн зөвлөгөө авах уу?</h2>
+    <p class="text-sm mb-5 leading-relaxed">
+      Таньд мэргэжлийн тусламж хэрэгтэй байвал сэтгэлзүйчтэй холбогдоорой.
+    </p>
+    <a href="#" class="inline-block px-6 py-2 bg-[#5A2A27] text-white rounded-full text-sm hover:bg-[#A78C7D] transition">
+      Цаг авах
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#E9D8D2] py-10 mt-10">
+  <div class="max-w-2xl mx-auto text-sm text-[#5A2A27] text-center space-y-4">
+    <div class="flex justify-center gap-4 flex-wrap mt-4">
+      <span>© 2025 Оюунсанаа</span>
+      <a href="#" class="hover:underline">Холбоо барих</a>
+      <a href="#" class="hover:underline">Үйлчилгээний нөхцөл</a>
+      <a href="#" class="hover:underline">Хувийн нууцлал</a>
+    </div>
   </div>
 </footer>
 
 </body>
 </html>
-
-
-
-
-
-
