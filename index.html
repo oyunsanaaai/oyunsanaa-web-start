@@ -1,116 +1,74 @@
 <!DOCTYPE html>
 <html lang="mn">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Оюунсанаа – Сэтгэлийн боловсрол</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&family=DM+Serif+Display&family=EB+Garamond:wght@500&display=swap');
-      .fancy-title {
-        font-family: 'DM Serif Display', serif;
-      }
-      body {
-        font-family: 'Quicksand', sans-serif;
-      }
-      .soft-button {
-        background-color: rgba(255, 255, 255, 0.05);
-        color: #5A2A27;
-        padding: 0.3rem 0.8rem;
-        border-radius: 9999px;
-        font-size: 0.75rem;
-        border: none;
-        transition: background-color 0.3s ease;
-      }
-      .soft-button:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-    </style>
-  </head>
-  <body class="bg-[#F4EAE6] text-[#5A2A27]">
-    <header class="flex justify-between items-center px-8 py-6 bg-white shadow-md relative">
-      <div class="flex items-center space-x-2">
-        <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/logo.png?raw=true" alt="Oyunsanaa Logo" class="h-24 w-auto">
-      </div>
-      <button class="md:hidden text-xl" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
-        ☰
-      </button>
-      <nav class="space-x-6 hidden md:flex">
-        <a href="#" class="hover:underline">Төслийн танилцуулга</a>
-        <a href="#" class="hover:underline">Тестүүд</a>
-        <a href="#" class="hover:underline">Онлайн хичээл</a>
-        <a href="#" class="hover:underline">Видео контент</a>
-      </nav>
-      <div class="hidden md:block text-sm text-gray-600">(976) 9911-2233</div>
-      <div id="mobileMenu" class="md:hidden absolute top-16 left-0 w-full bg-white shadow-md hidden px-8 py-4 space-y-3">
-        <a href="#" class="block hover:underline">Төслийн танилцуулга</a>
-        <a href="#" class="block hover:underline">Тестүүд</a>
-        <a href="#" class="block hover:underline">Онлайн хичээл</a>
-        <a href="#" class="block hover:underline">Видео контент</a>
-        <div class="text-sm text-gray-600">(976) 9911-2233</div>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оюунсанаа</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#F4EAE6] text-[#5A2A27]">
 
-    <section class="flex flex-col lg:flex-row items-center justify-between px-10 pt-10 pb-16 bg-white shadow-sm max-w-[1500px] mx-auto rounded-xl mt-2">
-      <div class="lg:w-1/2 space-y-6">
-        <h1 class="text-4xl lg:text-5xl font-bold leading-snug fancy-title mt-[-1rem]">
-          Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл
-        </h1>
-        <p class="text-gray-700" style="font-family: 'EB Garamond', serif;">
-          Сэтгэлээ хуваалцах, ойлгогдох, тайвшрах орон зай.<br />Чамайг ойлгож сонсох Оюунсанаа байна.
-        </p>
-        <div class="grid grid-cols-2 gap-3 text-sm text-gray-600">
-          <span class="border rounded-full px-3 py-1 text-center">5000+ ярилцсан</span>
-          <span class="border rounded-full px-3 py-1 text-center">95% сэтгэл ханамж</span>
-          <span class="border rounded-full px-3 py-1 text-center">365 өдрийн зөвлөгөө</span>
-          <span class="border rounded-full px-3 py-1 text-center">10+ жилийн туршлага</span>
-        </div>
-        <div class="flex gap-4 pt-4">
-          <button class="bg-[#A78C7D] text-white px-5 py-2 rounded-full transition hover:bg-[#8b7265]">Ярилцъя</button>
-          <button class="border border-[#A78C7D] text-[#5A2A27] px-5 py-2 rounded-full transition hover:bg-[#F4EAE6]">Дэлгэрэнгүй</button>
-        </div>
-      </div>
+<!-- Background Layer -->
+<div class="absolute inset-0 bg-gradient-to-b from-[#F4EAE6] to-white opacity-60 z-0"></div>
 
-      <div class="lg:w-1/2 mt-10 lg:mt-0 relative">
-        <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/hero.jpg?raw=true" alt="Сэтгэл зүйн зөвлөгөөний зураг" class="rounded-2xl w-full max-h-[600px] object-contain object-top">
-        <div class="absolute bottom-4 left-6 flex flex-wrap gap-2 max-w-[90%]">
-          <button class="soft-button">Оюунсанаатай ярилцъя</button>
-          <button class="soft-button">Оюунсанаатай ярилцъя</button>
-          <button class="soft-button">Оюунсанаатай ярилцъя</button>
-          <button class="soft-button">Оюунсанаатай ярилцъя</button>
-        </div>
-      </div>
-    </section>
+<!-- Header -->
+<header class="relative z-10 flex items-center justify-between px-8 py-4 shadow-sm bg-[#F4EAE6] border-b border-[#E9B9B9] sticky top-0">
+  <div class="flex items-center gap-6">
+    <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/logo.png?raw=true" alt="Лого" class="h-12">
+    <nav>
+      <ul class="hidden md:flex gap-6 text-sm font-medium">
+        <li><a href="#" class="hover:text-[#A78C7D]">Төслийн танилцуулга</a></li>
+        <li><a href="#" class="hover:text-[#A78C7D]">Тестүүд</a></li>
+        <li><a href="#" class="hover:text-[#A78C7D]">Онлайн хичээл</a></li>
+        <li><a href="#" class="hover:text-[#A78C7D]">Видео контент</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="hidden md:flex gap-4">
+    <a href="#" class="text-sm border border-[#5A2A27] px-4 py-1 rounded-full hover:bg-[#5A2A27] hover:text-white">Нэвтрэх</a>
+    <a href="#" class="text-sm bg-[#5A2A27] text-white px-4 py-1 rounded-full hover:bg-[#A78C7D]">Бүртгүүлэх</a>
+  </div>
+</header>
 
-    <div class="fixed bottom-5 right-5 w-64 h-80">
-      <iframe src="https://oyunsanaa-chatbot.vercel.app" class="w-full h-full rounded-xl shadow-lg border" title="Chatbot" loading="lazy"></iframe>
+<!-- Hero Section -->
+<section class="relative z-10 flex flex-col md:flex-row items-center justify-between px-8 md:px-24 py-16 md:py-28 gap-12">
+  <!-- Text Side -->
+  <div class="md:w-1/2 space-y-6">
+    <h1 class="text-4xl md:text-5xl font-bold leading-snug">Сэтгэлийн боловсролоор<br />амьдралаа гэрэлтүүл</h1>
+    <p class="text-[#A78C7D] text-lg max-w-md">Оюунсанаа таны сэтгэлийн аяллыг сонсож, ойлгож, хөтөлнө.</p>
+    <div class="flex flex-wrap gap-4">
+      <button class="bg-[#5A2A27] text-white px-6 py-3 rounded-full hover:bg-[#A78C7D]">💬 Ярилцъя</button>
+      <button class="border border-[#5A2A27] text-[#5A2A27] px-6 py-3 rounded-full hover:bg-[#EBDDD4]">Дэлгэрэнгүй</button>
     </div>
+  </div>
 
-    <footer class="bg-[#5A2A27] text-white px-10 py-10 mt-10">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <div class="text-2xl font-bold mb-2">Oyunsanaa</div>
-          <p class="text-sm">Сэтгэлийн боловсрол – Танд зориулсан орон зай</p>
-        </div>
-        <div class="space-y-2">
-          <h4 class="font-semibold mb-2">Холбоос</h4>
-          <ul class="text-sm space-y-1">
-            <li><a href="#" class="hover:underline">Төслийн танилцуулга</a></li>
-            <li><a href="#" class="hover:underline">Тестүүд</a></li>
-            <li><a href="#" class="hover:underline">Онлайн хичээл</a></li>
-            <li><a href="#" class="hover:underline">Видео контент</a></li>
-          </ul>
-        </div>
-        <div class="space-y-2">
-          <h4 class="font-semibold mb-2">Холбоо барих</h4>
-          <p class="text-sm">Утас: (976) 9911-2233</p>
-          <p class="text-sm">И-мэйл: info@oyunsanaa.mn</p>
-        </div>
-      </div>
-      <div class="text-center text-xs text-gray-300 mt-8">© 2025 Oyunsanaa. Бүх эрх хуулиар хамгаалагдсан.</div>
-    </footer>
-  </body>
+  <!-- Image Side -->
+  <div class="md:w-1/2 relative">
+    <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/hero.jpg?raw=true" alt="Оюунсанаа" class="w-full max-w-md mx-auto rounded-[60px_0_60px_0] shadow-2xl">
+
+    <!-- Floating Box -->
+    <div class="absolute -bottom-10 left-0 bg-white shadow-xl rounded-xl p-4 w-52 hidden md:block">
+      <ul class="text-sm space-y-2">
+        <li><a href="#" class="text-[#5A2A27] font-semibold">Оюунсанаа гэж хэн бэ?</a></li>
+        <li><a href="#" class="text-[#1e40af] font-semibold">Та ганцаардаагүй</a></li>
+        <li><a href="#" class="text-[#1e40af] font-semibold">Зөвлөгөө авах</a></li>
+        <li><a href="#" class="text-[#1e40af] font-semibold">Холбогдох</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</body>
 </html>
+
+
+
 
 
 
