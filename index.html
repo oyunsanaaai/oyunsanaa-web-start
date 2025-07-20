@@ -55,86 +55,35 @@
     <div class="flex justify-center">
       <button class="bg-[#5A2A27] text-white px-6 py-3 rounded-full hover:bg-[#A78C7D]">💬 Ярилцья</button>
     </div>
-
-    <!-- Video Text Slider Section (positioned under Ярилцья) -->
-    <div class="pt-8">
-      <div class="h-16 relative overflow-hidden text-lg text-[#5A2A27] font-semibold">
-        <div id="textSlider" class="absolute inset-0 flex items-center justify-center transition-opacity duration-1000">
-          <span class="slider-text">Сэтгэлээ сонс</span>
-        </div>
-      </div>
-    </div>
   </div>
 
   <!-- Image Side -->
   <div class="md:w-1/2 relative mt-10 md:mt-16">
-    <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/hero.jpg?raw=true" alt="Оюунсанаа" class="w-full max-w-md mx-auto rounded-[60px_0_60px_0] shadow-2xl">
+    <img src="https://github.com/oyunsanaaai/oyunsanaa-web-start/blob/main/assets/hero.jpg?raw=true" alt="Оюунс
 
-    <!-- Floating Box -->
-    <div class="absolute bottom-[60px] left-[-40px] bg-white/60 shadow-xl rounded-xl p-4 w-52 hidden md:block">
-      <ul class="text-sm space-y-2">
-        <li><a href="#" class="text-[#5A2A27] font-semibold">Оюунсанаа гэж хэн бэ?</a></li>
-        <li><a href="#" class="text-[#5A2A27] font-semibold">Тэр юу хийдэг вэ?</a></li>
-        <li><a href="#" class="text-[#5A2A27] font-semibold">Хэнд зориулагдсан бэ?</a></li>
-        <li><a href="#" class="text-[#5A2A27] font-semibold">Таньд юу өгч чадах вэ?</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
+Яг зөв! Тэгэхээр видеог **“💬 Ярилцъя” товчны дор**, гэхдээ **“Сэтгэлзүйчтэй холбогдох” хэсгийн өмнө** оруулах нь хамгийн зөв байрлал. Би яг тэр хэсэгт тааруулсан кодыг доор оруулж өглөө.
 
-<script>
-  const texts = [
-    "Сэтгэлээ сонс",
-    "Өөрийгөө ойлго",
-    "Бусдыг хайрла",
-    "Амьдралаа гэрэлтүүл"
-  ];
-  let index = 0;
-  const slider = document.getElementById("textSlider");
-  setInterval(() => {
-    index = (index + 1) % texts.length;
-    slider.classList.add("opacity-0");
-    setTimeout(() => {
-      slider.innerHTML = `<span class="slider-text">${texts[index]}</span>`;
-      slider.classList.remove("opacity-0");
-    }, 500);
-  }, 3000);
-</script>
+---
 
-<!-- Video Section -->
-<section class="px-6 pt-8 pb-16">
-  <div class="max-w-4xl mx-auto">
-    <video class="w-full rounded-2xl shadow-lg" autoplay muted loop>
-      <source src="https://github.com/oyunsanaaai/oyunsanaa-web-start/raw/main/assets/oyunsanaa-intro.mp4" type="video/mp4">
-      Таны хөтөч видео тоглуулах боломжгүй байна.
+### ✅ Яг “💬 Ярилцъя” товчны **доорх видео хэсэг** 👇
+
+```html
+<!-- CTA товч (Ярилцъя) -->
+<div class="flex justify-center mt-4">
+  <button class="bg-[#5A2A27] text-white px-6 py-3 rounded-full text-lg">
+    🗨️ Ярилцъя
+  </button>
+</div>
+
+<!-- Видео хэсэг -->
+<div class="mt-8 px-4">
+  <div class="max-w-md mx-auto text-center">
+    <p class="text-[#5A2A27] font-semibold text-lg mb-2">
+      🎥 Оюунсанааг танилцуулах богино видео
+    </p>
+    <video width="100%" controls autoplay muted loop class="rounded-lg shadow-lg">
+      <source src="assets/Oyunsanaa1.mp4" type="video/mp4" />
+      Таны төхөөрөмж видео тоглуулах боломжгүй байна.
     </video>
   </div>
-</section>
-
-<!-- Сэтгэлзүйчтэй холбогдох хэсэг -->
-<section class="mt-10 px-4 pt-14 pb-8">
-  <div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-xl font-semibold mb-3">💬 Сэтгэлзүйн зөвлөгөө авах уу?</h2>
-    <p class="text-sm mb-5 leading-relaxed">
-      Таньд мэргэжлийн тусламж хэрэгтэй байвал сэтгэлзүйчтэй холбогдоорой.
-    </p>
-    <a href="#" class="inline-block px-6 py-2 bg-[#5A2A27] text-white rounded-full text-sm hover:bg-[#A78C7D] transition">
-      Цаг авах
-    </a>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-[#E9D8D2] py-10 mt-10">
-  <div class="max-w-2xl mx-auto text-sm text-[#5A2A27] text-center space-y-4">
-    <div class="flex justify-center gap-4 flex-wrap mt-4">
-      <span>© 2025 Оюунсанаа</span>
-      <a href="#" class="hover:underline">Холбоо барих</a>
-      <a href="#" class="hover:underline">Үйлчилгээний нөхцөл</a>
-      <a href="#" class="hover:underline">Хувийн нууцлал</a>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
+</div>
