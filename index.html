@@ -83,24 +83,35 @@
 </section>
 
 <!-- Video Section -->
+<!-- Video Section with 3 alternating videos -->
 <section class="px-6 pt-8 pb-16">
-  <div class="max-w-4xl mx-auto">
-    <!-- Video Section -->
-<section class="px-6 pt-8 pb-16 animate-fade-in">
   <div class="max-w-4xl mx-auto text-center">
-    <video class="w-full rounded-2xl shadow-lg mx-auto" controls playsinline>
-      <source src="https://cdn.jsdelivr.net/gh/oyunsanaaai/oyunsanaa-web-start/Videos/Oyunsanaa2.mp4" type="video/mp4">
+    <video id="oyunsanaaVideo" class="w-full rounded-2xl shadow-lg" autoplay muted>
+      <source src="Videos/Oyunsanaa1.mp4" type="video/mp4">
       Таны хөтөч видео тоглуулах боломжгүй байна.
     </video>
     <p class="text-[#5A2A27] text-sm mt-4">
-      🤍 Энэ бичлэг нь Оюунсанаагийн сэтгэлийн боловсролын аяллын танилцуулга юм. Та анхааралтай сонсоод, дотроо мэдрээрэй.
+      🤍 Энэ бичлэг нь Оюунсанаагийн сэтгэлийн боловсролын танилцуулга юм.
     </p>
   </div>
 </section>
-    </video>
-  </div>
-</section>
 
+<script>
+  const video = document.getElementById('oyunsanaaVideo');
+  const sources = [
+    'Videos/Oyunsanaa1.mp4',
+    'Videos/Oyunsanaa2.mp4',
+    'Videos/Oyunsanaa3.mp4'
+  ];
+  let current = 0;
+
+  video.addEventListener('ended', () => {
+    current = (current + 1) % sources.length;
+    video.src = sources[current];
+    video.load();
+    video.play();
+  });
+</script>
 <!-- Сэтгэлзүйчтэй холбогдох хэсэг -->
 <section class="mt-10 px-4 pt-14 pb-8">
   <div class="max-w-3xl mx-auto text-center">
